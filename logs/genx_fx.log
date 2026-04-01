@@ -1,4 +1,32 @@
-2025-10-11 14:52:07,922 - __main__ - INFO - Initializing GenX_FX Trading System v1.0.0
-2025-10-11 14:52:07,922 - __main__ - INFO - Starting GenX_FX Trading System...
-2025-10-11 14:54:58,387 - __main__ - INFO - Initializing GenX_FX Trading System v1.0.0
-2025-10-11 14:54:58,389 - __main__ - INFO - Starting GenX_FX Trading System...
+# GenX_FX Log File
+2026-04-01 03:57:49,054 - __main__ - INFO - Initializing GenX_FX Trading System v1.0.0
+2026-04-01 03:57:49,057 - src.common.config_loader - INFO - Configuration loaded successfully from config/default_config.yaml
+2026-04-01 03:57:49,058 - src.genx.engine - INFO - Initialized GenX Engine for EURUSD=X (Short EMA: 20, Long EMA: 50)
+2026-04-01 03:57:49,058 - src.genz.engine - INFO - Initialized GenZ Engine for BTC/USDT (Model: v1.0.0, Confidence Threshold: 0.65)
+2026-04-01 03:57:49,058 - __main__ - INFO - Starting GenX_FX Trading System...
+2026-04-01 03:57:49,059 - src.genx.engine - INFO - Running GenX trading cycle for EURUSD=X
+2026-04-01 03:57:49,059 - src.common.data_loader - INFO - Fetching Forex data for EURUSD=X
+2026-04-01 03:57:49,060 - __main__ - INFO - Starting API Server on http://0.0.0.0:8000
+2026-04-01 03:57:49,906 - src.genx.strategies.trend_following - INFO - Generating Trend Following signals for GenX Forex system
+2026-04-01 03:57:49,907 - src.genx.strategies.trend_following - WARNING - Insufficient data for signal generation
+2026-04-01 03:57:49,907 - __main__ - ERROR - Error in trading loop: 'signal'
+2026-04-01 03:58:09,200 - __main__ - INFO - Initializing GenX_FX Trading System v1.0.0
+2026-04-01 03:58:09,203 - src.common.config_loader - INFO - Configuration loaded successfully from config/default_config.yaml
+2026-04-01 03:58:09,203 - src.genx.engine - INFO - Initialized GenX Engine for EURUSD=X (Short EMA: 20, Long EMA: 50)
+2026-04-01 03:58:09,204 - src.genz.engine - INFO - Initialized GenZ Engine for BTC/USDT (Model: v1.0.0, Confidence Threshold: 0.65)
+2026-04-01 03:58:09,204 - __main__ - INFO - Starting GenX_FX Trading System...
+2026-04-01 03:58:09,204 - src.genx.engine - INFO - Running GenX trading cycle for EURUSD=X
+2026-04-01 03:58:09,205 - src.common.data_loader - INFO - Fetching Forex data for EURUSD=X
+2026-04-01 03:58:09,206 - __main__ - INFO - Starting API Server on http://0.0.0.0:8000
+2026-04-01 03:58:10,367 - src.genx.strategies.trend_following - INFO - Generating Trend Following signals for GenX Forex system
+2026-04-01 03:58:10,367 - src.genx.strategies.trend_following - WARNING - Insufficient data for signal generation
+2026-04-01 03:58:10,369 - src.genx.engine - WARNING - No data available for EURUSD=X at this time.
+2026-04-01 03:58:10,370 - src.genz.engine - INFO - Running GenZ trading cycle for BTC/USDT
+2026-04-01 03:58:10,370 - src.common.data_loader - INFO - Fetching Crypto data for BTC/USDT
+2026-04-01 03:58:10,542 - src.common.data_loader - ERROR - Error fetching Crypto data: binance GET https://api.binance.com/api/v3/exchangeInfo 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-01 03:58:10,546 - src.genz.strategies.ai_sentiment - INFO - Generating AI Sentiment signals for GenZ Crypto system using version v1.0.0
+2026-04-01 03:58:10,547 - src.genz.strategies.ai_sentiment - WARNING - Insufficient data for signal generation
+2026-04-01 03:58:10,547 - src.genz.engine - WARNING - No data available for BTC/USDT at this time.
