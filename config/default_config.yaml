@@ -1,0 +1,36 @@
+# GenX_FX Default Configuration
+
+# Trading Mode (Set to true for live account trading - USE WITH CAUTION)
+live_trading: false
+
+# API Keys (Placeholders)
+api_keys:
+  alpha_vantage: "YOUR_ALPHA_VANTAGE_KEY"
+  binance_api: "YOUR_BINANCE_API_KEY"
+  binance_secret: "YOUR_BINANCE_SECRET_KEY"
+
+# GenX System (Forex)
+genx:
+  symbol: "EURUSD=X"
+  interval: "1h"
+  short_ema: 20
+  long_ema: 50
+
+# GenZ System (Crypto & AI)
+genz:
+  symbol: "BTC/USDT"
+  timeframe: "1h"
+  confidence_threshold: 0.65
+  model_version: "v1.0.0"
+
+# Risk Management
+risk_management:
+  max_risk_per_trade: 0.02
+  default_stop_loss_pct: 0.05
+  account_balance: 10000.0
+
+# General
+logging_level: "INFO"
+api_server:
+  host: "0.0.0.0"
+  port: 8000
