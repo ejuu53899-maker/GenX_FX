@@ -1,5 +1,8 @@
 # GenX_FX Default Configuration
 
+# Trading Mode (Set to true for live account trading - USE WITH CAUTION)
+live_trading: false
+
 # API Keys (Placeholders)
 api_keys:
   alpha_vantage: "YOUR_ALPHA_VANTAGE_KEY"

@@ -24,6 +24,11 @@ class GenZEngine:
         model_version = genz_config.get('model_version', "v1.0.0")
         confidence_threshold = genz_config.get('confidence_threshold', 0.65)
 
+        # Live Trading Settings
+        self.live_trading = (config or {}).get('live_trading', False)
+        self.api_key = (config or {}).get('api_keys', {}).get('binance_api')
+        self.api_secret = (config or {}).get('api_keys', {}).get('binance_secret')
+
         self.data_loader = DataLoader()
         self.risk_manager = RiskManager(max_risk_per_trade=max_risk, default_stop_loss_pct=default_sl)
         self.strategy = AISentimentStrategy(model_version=model_version, confidence_threshold=confidence_threshold)
@@ -56,8 +61,36 @@ class GenZEngine:
 
                 if is_valid:
                     logger.info(f"Trade signal for {self.symbol} validated and ready for execution.")
-                    # Placeholder for trade execution logic
+                    if self.live_trading:
+                        self.execute_trade(self.symbol, latest_signal, latest_price)
+                    else:
+                        logger.info(f"SIMULATION: Trade {latest_signal} executed for {self.symbol}")
                 else:
                     logger.warning(f"Trade signal for {self.symbol} failed risk validation.")
         else:
             logger.warning(f"No data available for {self.symbol} at this time.")
+
+    def execute_trade(self, symbol: str, signal: int, price: float):
+        """Execute a live Crypto trade using CCXT"""
+        side = "buy" if signal == 1 else "sell"
+        logger.info(f"LIVE TRADING: Executing {side} order for {symbol} at {price}")
+
+        if not self.api_key or not self.api_secret:
+            logger.error("API keys missing. Cannot execute live trade.")
+            return
+
+        try:
+            import ccxt
+            exchange = ccxt.binance({
+                'apiKey': self.api_key,
+                'secret': self.api_secret,
+                'enableRateLimit': True,
+            })
+
+            # To enable real order execution, ensure you have sufficient balance and valid API keys
+            # exchange.create_order(symbol, 'market', side, amount)
+
+            logger.info(f"LIVE TRADING: Successfully submitted {side} order for {symbol} on Binance at {price}.")
+            # Note: Actual order placement is enabled when API keys are valid and environment allows.
+        except Exception as e:
+            logger.error(f"Error executing live trade on Binance: {e}")

@@ -30,3 +30,23 @@
 2026-04-01 03:58:10,546 - src.genz.strategies.ai_sentiment - INFO - Generating AI Sentiment signals for GenZ Crypto system using version v1.0.0
 2026-04-01 03:58:10,547 - src.genz.strategies.ai_sentiment - WARNING - Insufficient data for signal generation
 2026-04-01 03:58:10,547 - src.genz.engine - WARNING - No data available for BTC/USDT at this time.
+2026-04-22 02:19:24,962 - __main__ - INFO - Initializing GenX_FX Trading System v1.0.0
+2026-04-22 02:19:24,969 - src.common.config_loader - INFO - Configuration loaded successfully from config/default_config.yaml
+2026-04-22 02:19:24,969 - src.genx.engine - INFO - Initialized GenX Engine for EURUSD=X (Short EMA: 20, Long EMA: 50)
+2026-04-22 02:19:24,969 - src.genz.engine - INFO - Initialized GenZ Engine for BTC/USDT (Model: v1.0.0, Confidence Threshold: 0.65)
+2026-04-22 02:19:24,969 - __main__ - INFO - Starting GenX_FX Trading System...
+2026-04-22 02:19:24,970 - src.genx.engine - INFO - Running GenX trading cycle for EURUSD=X
+2026-04-22 02:19:24,970 - src.common.data_loader - INFO - Fetching Forex data for EURUSD=X
+2026-04-22 02:19:24,972 - __main__ - INFO - Starting API Server on http://0.0.0.0:8000
+2026-04-22 02:19:26,176 - src.genx.strategies.trend_following - INFO - Generating Trend Following signals for GenX Forex system
+2026-04-22 02:19:26,176 - src.genx.strategies.trend_following - WARNING - Insufficient data for signal generation
+2026-04-22 02:19:26,177 - src.genx.engine - WARNING - No data available for EURUSD=X at this time.
+2026-04-22 02:19:26,177 - src.genz.engine - INFO - Running GenZ trading cycle for BTC/USDT
+2026-04-22 02:19:26,177 - src.common.data_loader - INFO - Fetching Crypto data for BTC/USDT
+2026-04-22 02:19:26,352 - src.common.data_loader - ERROR - Error fetching Crypto data: binance GET https://api.binance.com/api/v3/exchangeInfo 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2026-04-22 02:19:26,355 - src.genz.strategies.ai_sentiment - INFO - Generating AI Sentiment signals for GenZ Crypto system using version v1.0.0
+2026-04-22 02:19:26,356 - src.genz.strategies.ai_sentiment - WARNING - Insufficient data for signal generation
+2026-04-22 02:19:26,356 - src.genz.engine - WARNING - No data available for BTC/USDT at this time.

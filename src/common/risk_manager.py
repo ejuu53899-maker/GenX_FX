@@ -27,8 +27,19 @@ class RiskManager:
             logger.error(f"Invalid side: {side}")
             return entry_price
 
-    def check_trade_validity(self, trade_params: Dict[str, Any]) -> bool:
+    def check_trade_validity(self, trade_params: Dict[str, Any], current_balance: float = None) -> bool:
         """Validate if the trade parameters are within acceptable risk limits"""
-        # Placeholder logic
         logger.info(f"Validating trade: {trade_params}")
+
+        if current_balance is not None:
+            trade_value = trade_params.get('price', 0) * trade_params.get('quantity', 0)
+            if trade_value > current_balance:
+                logger.warning(f"Insufficient balance: {current_balance} < {trade_value}")
+                return False
+
+        # Additional safety checks
+        if trade_params.get('price', 0) <= 0:
+            logger.warning("Invalid trade price")
+            return False
+
         return True
