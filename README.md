@@ -1,41 +1,64 @@
-# GenX_FX Trading System
+# GenX_FX Trading System - GENX 3.6.9 Agent OS
 
-A comprehensive AI-powered foreign exchange trading system with advanced market analysis and automated trading capabilities.
+A comprehensive AI-powered foreign exchange trading system and Autonomous Device Intelligence Operating System.
 
-## 🚀 Features
+## 🚀 One-Click Jules Deployment
 
-- **AI-Powered Analysis**: Advanced machine learning models for market prediction
-- **Real-time Data**: Live market data integration from multiple sources
-- **Automated Trading**: Intelligent trading algorithms with risk management
-- **Multi-Platform Support**: Works with multiple brokers and exchanges
-- **Web Interface**: Modern React-based dashboard
-- **API Integration**: RESTful API for external integrations
+Deploy and launch the complete GENX 3.6.9 Agent Mode Operating System with a single command:
+
+```bash
+./deploy.sh
+```
+
+or:
+
+```bash
+./scripts/deploy_jules.sh
+```
+
+For complete deployment details, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
+---
+
+## 🤖 GENX 3.6.9 Agent Architecture
+
+- **🧠 Commander Agent** (`agents/commander/`): Central Brain (Planner, Decision Engine, Memory, Task Queue, Communication)
+- **🛠️ Builder Agent** (`agents/builder/`): AI Software Engineer (Code Generator, Tester, Documentation, Git Manager, Improvement Loop)
+- **⚙️ DevOps Agent** (`agents/devops/`): Infrastructure Engineer (Docker Manager, Server Manager, Deployment, Monitoring, Backup)
+- **📊 Trading Intelligence Agent** (`agents/trading/`): Financial Analysis Worker (Market Scanner, Strategy Engine, Risk Manager, Execution Bridge, Trade Journal)
+- **🛡️ Guardian Agent** (`agents/guardian/`): Security & Safety (Access Control, Secret Manager, Threat Detection, Backup Check, Emergency Stop)
+- **💻 Device Worker Agents** (`agents/workers/`): Mini PC Agent, Laptop Agent, USB Intelligence Agent
+
+---
 
 ## 📁 Project Structure
 
 ```
 GenX_FX/
-├── src/                    # Source code
-├── tests/                  # Unit and integration tests
-├── docs/                   # Documentation
-├── config/                 # Configuration files
-├── scripts/                # Utility scripts
-├── assets/                 # Static assets
-├── data/                   # Data files and models
-├── .vscode/                # VS Code configuration
-├── requirements.txt        # Python dependencies
-├── GenX_FX.code-workspace # VS Code workspace file
-└── README.md              # This file
+├── agents/                 # GENX 3.6.9 Agent Mode System
+│   ├── commander/          # Commander Agent
+│   ├── builder/            # Builder Agent
+│   ├── devops/             # DevOps Agent
+│   ├── trading/            # Trading Intelligence Agent
+│   ├── guardian/           # Guardian Agent
+│   ├── workers/            # Mini PC, Laptop, USB Agents
+│   └── common/             # MessageBus, Permissions, BaseAgent, Schemas
+├── src/                    # Source code & main entrypoint
+├── tests/                  # Test suite
+├── data/                   # Memories, experiences, failures, improvements
+├── scripts/                # Deployment scripts (deploy_jules.sh)
+├── deploy.sh               # One-click deployment executable
+├── DEPLOYMENT.md           # Deployment documentation
+└── README.md               # This file
 ```
 
 ## 🛠️ Setup Instructions
 
 ### Prerequisites
 - Python 3.11+
-- Node.js 18+
 - VS Code or Cursor IDE
 
-### Installation
+### Installation & Launch
 
 1. Clone the repository:
    ```bash
@@ -43,102 +66,23 @@ GenX_FX/
    cd GenX_FX
    ```
 
-2. Create virtual environment:
+2. Run One-Click Jules Deployment:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ./deploy.sh
    ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Set up environment variables:
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
-
-5. Run the application:
-   ```bash
-   python src/main.py
-   ```
-
-## 💻 Development
-
-### VS Code Setup
-1. Open the workspace file: `GenX_FX.code-workspace`
-2. Install recommended extensions
-3. Configure your Python interpreter
-
-### Cursor Setup
-1. Open the project folder in Cursor
-2. Enable AI features for enhanced development
-3. Use the integrated terminal for commands
-
-### Code Formatting
-```bash
-# Format code
-black src/ tests/
-
-# Sort imports
-isort src/ tests/
-
-# Lint code
-flake8 src/ tests/
-```
 
 ## 🧪 Testing
 ```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=src tests/
+# Run all agent tests
+python3 -m pytest
 ```
-
-## 📊 Trading Features
-
-- **Strategy Engine**: Multiple trading strategies
-- **Risk Management**: Position sizing and stop-loss management
-- **Backtesting**: Historical data analysis
-- **Paper Trading**: Risk-free testing environment
-- **Live Trading**: Real money trading capabilities
 
 ## 🔐 Security
 
-- Encrypted API keys
-- Secure authentication
-- Rate limiting
-- Audit logging
-
-## 📈 Performance
-
-- High-frequency trading support
-- Low-latency data processing
-- Scalable architecture
-- Real-time monitoring
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
+- Secret sanitization and redaction via Guardian Secret Manager
+- Access control verification with Permission Levels (LEVEL 0 to 5)
+- Anomaly threat detection & emergency stop state machine
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support
-
-For support, please contact:
-- Email: support@genxfx.com
-- Discord: [Join our community]
-- Documentation: [docs.genxfx.com]
-
-## ⚠️ Disclaimer
-
-This software is for educational and research purposes only. Trading involves risk and you should never trade with money you cannot afford to lose.
