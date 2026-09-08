@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 GenX_FX Main Application
-A comprehensive trading system with AI-powered analysis and Skill Manager OS layer
+A comprehensive trading system with AI-powered analysis, Skill Manager OS layer, and Agent Commander runtime.
 """
 
 import sys
@@ -13,6 +13,7 @@ project_root = Path(__file__).parent.parent
 sys.path.append(str(project_root))
 
 from src.skill_manager import SkillManager
+from agents.commander.main import AgentCommander
 
 # Configure logging
 logging.basicConfig(
@@ -34,10 +35,11 @@ class GenXFXApp:
         self.version = "3.6.9"
         self.name = "GENX 3.6.9 Device Ecosystem"
         self.skill_manager = SkillManager(root_dir=str(project_root))
+        self.agent_commander = AgentCommander(skill_manager=self.skill_manager)
         logger.info(f"Initializing {self.name} v{self.version}")
 
     def start(self):
-        """Start the GenX_FX application and skill ecosystem"""
+        """Start the GenX_FX application, skill ecosystem, and agent runtime"""
         logger.info("Starting GENX 3.6.9 Trading System & Skill OS...")
         print(f"Welcome to {self.name} v{self.version}")
         
@@ -45,10 +47,10 @@ class GenXFXApp:
         discovered = self.skill_manager.discover_skills()
         print(f"Skill OS Layer loaded: {len(discovered)} skills discovered.")
 
-        if "mt5_bridge" in discovered:
-            self.skill_manager.activate_skill("mt5_bridge")
-            res = self.skill_manager.execute_skill("mt5_bridge", {"action": "health_check"})
-            print(f"mt5_bridge execution result: {res}")
+        # Run Agent Commander directive
+        directive_result = self.agent_commander.execute_directive("Analyze trading market and record decision")
+        print(f"Agent Commander Directive Status: {directive_result.get('status')}")
+        print(f"Executed Steps: {len(directive_result.get('execution_results', []))}")
 
         print("System initialized successfully!")
 
