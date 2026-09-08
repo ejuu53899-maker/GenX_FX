@@ -1,0 +1,6 @@
+author: GENX
+name: task_scheduler
+permission:
+- task.schedule
+status: active
+version: 1.0.0

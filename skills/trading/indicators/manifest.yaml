@@ -1,0 +1,6 @@
+author: GENX
+name: trading_indicators
+permission:
+- market.read
+status: active
+version: 1.0.0

@@ -1,0 +1,6 @@
+author: GENX
+name: agent_planner
+permission:
+- agent.plan
+status: active
+version: 1.0.0

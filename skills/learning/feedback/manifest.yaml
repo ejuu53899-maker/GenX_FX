@@ -1,0 +1,6 @@
+author: GENX
+name: feedback_loop
+permission:
+- feedback.record
+status: active
+version: 1.0.0

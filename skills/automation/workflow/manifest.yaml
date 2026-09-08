@@ -1,0 +1,6 @@
+author: GENX
+name: workflow_engine
+permission:
+- workflow.execute
+status: active
+version: 1.0.0

@@ -1,0 +1,7 @@
+author: GENX
+name: storage_manager
+permission:
+- storage.read
+- storage.write
+status: active
+version: 1.0.0

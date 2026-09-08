@@ -1,0 +1,7 @@
+author: GENX
+name: agent_coder
+permission:
+- code.generate
+- code.test
+status: active
+version: 1.0.0

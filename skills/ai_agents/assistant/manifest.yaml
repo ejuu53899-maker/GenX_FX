@@ -1,0 +1,6 @@
+author: GENX
+name: agent_assistant
+permission:
+- user.interact
+status: active
+version: 1.0.0
