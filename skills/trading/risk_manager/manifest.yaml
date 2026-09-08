@@ -1,0 +1,7 @@
+author: GENX
+name: risk_manager
+permission:
+- risk.evaluate
+- trading.execute
+status: active
+version: 1.0.0

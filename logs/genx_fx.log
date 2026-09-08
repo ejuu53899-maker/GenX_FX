@@ -2,3 +2,17 @@
 2025-10-11 14:52:07,922 - __main__ - INFO - Starting GenX_FX Trading System...
 2025-10-11 14:54:58,387 - __main__ - INFO - Initializing GenX_FX Trading System v1.0.0
 2025-10-11 14:54:58,389 - __main__ - INFO - Starting GenX_FX Trading System...
+2026-09-08 18:43:40,638 - __main__ - INFO - Initializing GENX 3.6.9 Device Ecosystem v3.6.9
+2026-09-08 18:43:40,638 - __main__ - INFO - Starting GENX 3.6.9 Trading System & Skill OS...
+2026-09-08 18:43:40,659 - src.skill_manager - INFO - Discovered 22 skill modules.
+2026-09-08 18:43:40,663 - src.skill_manager - INFO - Skill 'mt5_bridge' activated successfully.
+2026-09-08 21:41:29,901 - __main__ - INFO - Initializing GENX 3.6.9 Device Ecosystem v3.6.9
+2026-09-08 21:41:29,902 - __main__ - INFO - Starting GENX 3.6.9 Trading System & Skill OS...
+2026-09-08 21:41:29,927 - src.skill_manager - INFO - Discovered 22 skill modules.
+2026-09-08 21:41:29,927 - agents.commander.main - INFO - Agent Commander received directive: Analyze trading market and record decision
+2026-09-08 21:41:29,930 - src.skill_manager - INFO - Skill 'agent_planner' activated successfully.
+2026-09-08 21:41:29,931 - src.skill_manager - INFO - Skill 'hardware_scan' activated successfully.
+2026-09-08 21:41:29,932 - src.skill_manager - INFO - Skill 'mt5_bridge' activated successfully.
+2026-09-08 21:41:29,933 - src.skill_manager - INFO - Skill 'risk_manager' activated successfully.
+2026-09-08 21:41:29,935 - src.skill_manager - INFO - Skill 'trading_strategy' activated successfully.
+2026-09-08 21:41:29,943 - src.skill_manager - INFO - Skill 'memory_engine' activated successfully.

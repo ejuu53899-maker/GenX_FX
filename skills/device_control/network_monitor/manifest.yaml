@@ -1,0 +1,6 @@
+author: GENX
+name: network_monitor
+permission:
+- network.read
+status: active
+version: 1.0.0

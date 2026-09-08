@@ -1,0 +1,6 @@
+author: GENX
+name: deployment_manager
+permission:
+- deploy.execute
+status: active
+version: 1.0.0

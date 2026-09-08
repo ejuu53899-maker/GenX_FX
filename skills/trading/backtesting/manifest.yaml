@@ -1,0 +1,7 @@
+author: GENX
+name: backtesting
+permission:
+- market.read
+- simulation.run
+status: active
+version: 1.0.0

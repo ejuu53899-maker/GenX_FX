@@ -1,0 +1,7 @@
+author: GENX
+name: mt5_bridge
+permission:
+- market.read
+- trading.execute
+status: active
+version: 1.0.0

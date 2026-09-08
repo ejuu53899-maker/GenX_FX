@@ -1,0 +1,6 @@
+author: GENX
+name: hardware_scan
+permission:
+- hardware.read
+status: active
+version: 1.0.0

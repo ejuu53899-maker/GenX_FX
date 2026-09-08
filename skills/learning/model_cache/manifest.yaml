@@ -1,0 +1,6 @@
+author: GENX
+name: model_cache
+permission:
+- model.cache
+status: active
+version: 1.0.0

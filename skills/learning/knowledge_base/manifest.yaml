@@ -1,0 +1,6 @@
+author: GENX
+name: knowledge_base
+permission:
+- kb.query
+status: active
+version: 1.0.0

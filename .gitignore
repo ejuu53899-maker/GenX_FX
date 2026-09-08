@@ -61,3 +61,8 @@ core/
 api/
 tests/
 utils/
+
+# Skills runtime logs and temp data
+skills/**/logs/*
+skills/**/data/*
+skills/**/__pycache__/

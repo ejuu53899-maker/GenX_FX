@@ -1,0 +1,7 @@
+author: GENX
+name: agent_researcher
+permission:
+- web.search
+- data.read
+status: active
+version: 1.0.0

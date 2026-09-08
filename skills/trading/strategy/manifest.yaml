@@ -1,0 +1,7 @@
+author: GENX
+name: trading_strategy
+permission:
+- trading.strategy.read
+- trading.execute
+status: active
+version: 1.0.0

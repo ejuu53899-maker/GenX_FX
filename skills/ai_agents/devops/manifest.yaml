@@ -1,0 +1,7 @@
+author: GENX
+name: agent_devops
+permission:
+- deploy.run
+- system.monitor
+status: active
+version: 1.0.0

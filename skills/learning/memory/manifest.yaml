@@ -1,0 +1,7 @@
+author: GENX
+name: memory_engine
+permission:
+- memory.read
+- memory.write
+status: active
+version: 1.0.0
