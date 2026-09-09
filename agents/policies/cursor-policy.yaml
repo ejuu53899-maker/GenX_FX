@@ -1,0 +1,8 @@
+agent: cursor
+role: developer
+permissions:
+  - read_dev_env
+  - generate_code
+  - run_tests
+restricted_actions:
+  - read_prod_keys

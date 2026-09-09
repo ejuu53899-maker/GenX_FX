@@ -1,0 +1,7 @@
+agent: warp
+role: operator
+permissions:
+  - execute_commands
+  - restart_services
+restricted_actions:
+  - export_master_key

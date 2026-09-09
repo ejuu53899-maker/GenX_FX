@@ -1,0 +1,6 @@
+agent: copilot
+role: assistant
+permissions:
+  - read_public_status
+restricted_actions:
+  - read_any_key
