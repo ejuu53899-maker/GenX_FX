@@ -20,6 +20,44 @@ For complete deployment details, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ---
 
+# 🧠 GENX AI HOUSE BRAIN ARCHITECTURE
+
+```
+                       Jules
+              (Planner / Orchestrator)
+                       │
+     ┌─────────────────┼─────────────────┐
+     ↓                 ↓                 ↓
+ Cursor IDE        VS Code           Warp Terminal
+ (AI Engineer)     (Universal IDE)   (System Control)
+     │                 │                 │
+     ↓                 ↓                 ↓
+ Git Repository → GitLab → CI/CD → Deployment
+                       │
+          ┌────────────┼────────────┐
+          ↓            ↓            ↓
+      Firebase     Google Cloud   Replit
+      Backend      Infrastructure Cloud Lab
+                       │
+                       ↓
+              Windows + Edge Copilot
+                       │
+                       ↓
+              BLUEDIM Device Nodes
+```
+
+### 🤖 Role Assignment Matrix
+
+- **🤖 Jules = CEO / Orchestrator** (Goal understanding, task decomposition, progress tracking)
+- **🧠 Cursor = AI Coding Brain** (Refactoring, repo search, code writing, MCP integration)
+- **⚡ Warp = House Terminal** (CLI control, docker compose, deployment commands, logs)
+- **🖥️ VS Code = Universal Control Room** (Docker, SSH, Dev Containers, extensions)
+- **🤖 BLUEDIM = Physical Edge Brain** (Mini PC running Docker, GENX Core, Local AI)
+
+For full architectural details, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
+---
+
 # 🚀 GENX AI-Native Development Ecosystem
 
 ## 🤖 AI Coding Agents
@@ -119,33 +157,6 @@ For complete deployment details, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ---
 
-## 🔄 GENX AI Development Flow
-
-```
-                 Jules AI Agent
-                       │
-                       ↓
-              Cursor AI Brain
-                       │
-        ┌──────────────┼──────────────┐
-        ↓              ↓              ↓
-   JetBrains       VS Code        Replit
-   IDE Layer       Dev Layer      Cloud Layer
-        └──────────────┼──────────────┘
-                       ↓
-                 GitLab CI/CD
-                       ↓
-        Firebase + Google Cloud Platform
-                       ↓
-          Edge / Chrome AI Dashboard
-                       ↓
-              BLUEDIM Device Nodes
-```
-
-This gives BLUEDIM/GENX a complete AI-native software factory identity: create → code → test → deploy → monitor → improve. 🚀
-
----
-
 ## 🤖 GENX 3.6.9 Agent Architecture
 
 - **🧠 Commander Agent** (`agents/commander/`): Central Brain (Planner, Decision Engine, Memory, Task Queue, Communication)
@@ -169,6 +180,7 @@ GenX_FX/
 │   ├── guardian/           # Guardian Agent
 │   ├── workers/            # Mini PC, Laptop, USB Agents
 │   └── common/             # MessageBus, Permissions, BaseAgent, Schemas
+├── docs/                   # Documentation & ARCHITECTURE.md
 ├── src/                    # Source code & main entrypoint
 ├── tests/                  # Test suite
 ├── data/                   # Memories, experiences, failures, improvements
