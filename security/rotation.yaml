@@ -1,8 +1,0 @@
-rotation_policy:
-  interval_days: 90
-  auto_rotate: true
-  services:
-    - gitlab
-    - firebase
-    - google_cloud
-    - mt5

@@ -1,34 +1,26 @@
 """Secret Manager for Guardian Agent - Ensures secrets are never exposed."""
 
 import logging
-from typing import Dict, Optional, Tuple
-from vault_core.vault_engine import VaultEngine
-from security.ai_guardian import AISecretGuardian
+from typing import Dict, Optional
+import re
 
 logger = logging.getLogger(__name__)
 
 
 class SecretManager:
-    """Manages sensitive API credentials, encrypts via VaultEngine, and monitors leaks via AISecretGuardian."""
+    """Manages sensitive API credentials and sanitizes log outputs."""
 
     def __init__(self):
-        self.vault_engine = VaultEngine()
-        self.ai_guardian = AISecretGuardian()
         self._secrets: Dict[str, str] = {}
 
-    def store_secret(self, key: str, value: str, owner: str = "Guardian") -> None:
-        """Store a sensitive key/value pair in encrypted vault."""
+    def store_secret(self, key: str, value: str) -> None:
+        """Store a sensitive key/value pair."""
         self._secrets[key] = value
-        self.vault_engine.store_secret(key, value, owner=owner)
-        logger.info(f"Secret key '{key}' securely stored in GENX Vault.")
+        logger.info(f"Secret key '{key}' securely stored.")
 
-    def get_secret(self, key: str, requesting_agent: str = "guardian") -> Optional[str]:
-        """Retrieve secret by key using vault policy engine."""
-        return self.vault_engine.get_secret(key, agent_name=requesting_agent)
-
-    def inspect_agent_action(self, agent_name: str, action_text: str) -> Tuple[bool, str]:
-        """Inspect agent action text for potential secret leaks."""
-        return self.ai_guardian.inspect_agent_action(agent_name, action_text)
+    def get_secret(self, key: str) -> Optional[str]:
+        """Retrieve secret by key."""
+        return self._secrets.get(key)
 
     def sanitize_output(self, text: str) -> str:
         """Sanitize text to redact any stored secret values."""

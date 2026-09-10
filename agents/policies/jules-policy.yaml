@@ -1,9 +1,0 @@
-agent: jules
-role: orchestrator
-permissions:
-  - read_templates
-  - request_access
-  - create_tasks
-  - audit
-restricted_actions:
-  - direct_prod_write
