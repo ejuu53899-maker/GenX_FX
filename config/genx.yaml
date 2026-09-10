@@ -1,0 +1,34 @@
+# GENX CLI Command Center Configuration v3.6.9
+system_name: "GENX CLI COMMAND CENTER"
+version: "3.6.9"
+devices:
+  mini_pc:
+    id: "A6-9V-MINIPC-001"
+    ip: "192.168.1.10"
+    os: "Ubuntu Server 24.04"
+    status: "ONLINE"
+  laptop:
+    id: "ASUS-LAPTOP-002"
+    ip: "192.168.1.20"
+    os: "Windows 11"
+    status: "ONLINE"
+  mobile:
+    id: "GALAXY-A51"
+    ip: "MOBILE"
+    os: "Android"
+    status: "SLEEP"
+storage:
+  adata_usb:
+    name: "ADATA32GB"
+    purpose: "Backup / Vault"
+    status: "CONNECTED"
+  bluedim_usb:
+    name: "BLUEDIM64GB"
+    purpose: "AI Boot / Recovery"
+    status: "ACTIVE"
+trading:
+  broker: "FxPro MT5"
+  account: "Demo"
+  ea_name: "ExpertMAPSAR_GenX_v5"
+  symbol: "XAUUSD"
+  risk_guard: "ACTIVE"

@@ -16,9 +16,10 @@ echo -e "${GREEN}🚀 GENX 3.6.9 ONE-CLICK JULES DEPLOYMENT${NC}"
 echo -e "${BLUE}======================================================================${NC}"
 
 # Step 1: Directory Setup
-echo -e "${YELLOW}[1/4] Initializing Agent OS Directories...${NC}"
-mkdir -p data/memories data/experiences data/failures data/improvements data/usb_drive logs
-echo -e "${GREEN}✓ Directories verified.${NC}"
+echo -e "${YELLOW}[1/4] Initializing Agent OS Directories & CLI Permissions...${NC}"
+mkdir -p data/memories data/experiences data/failures data/improvements data/usb_drive data/logs logs
+chmod +x genx 2>/dev/null || true
+echo -e "${GREEN}✓ Directories verified & CLI Control Hub ready.${NC}"
 
 # Step 2: Python Environment & Dependencies
 echo -e "${YELLOW}[2/4] Verifying Python Environment & Core Dependencies...${NC}"
