@@ -16,6 +16,16 @@ Or via scripts path:
 
 ---
 
+## 📈 One-Click MT5 & EA Smart Hosting VPS Setup
+
+Set up MetaTrader 5 (MT5) terminals, Exness broker accounts, and deploy the GENX Smart EA Trading Bridge on Ubuntu/Windows private VPS hosting devices:
+
+```bash
+./scripts/install_mt5_ea.sh
+```
+
+---
+
 ## 🛠️ What One-Click Deployment Does
 
 1. **Directories Initialization**: Creates required learning loop directories (`data/memories/`, `data/experiences/`, `data/failures/`, `data/improvements/`, `data/usb_drive/`, `logs/`).

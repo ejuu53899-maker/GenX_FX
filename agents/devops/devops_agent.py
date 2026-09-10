@@ -1,6 +1,7 @@
 """DevOps Agent - Infrastructure Engineer."""
 
 import logging
+import subprocess
 from typing import Dict, Any
 from pathlib import Path
 from agents.common.base_agent import BaseAgent
@@ -17,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 class DevOpsAgent(BaseAgent):
-    """DevOps Agent responsible for infrastructure, deployments, containers, server health, and backups."""
+    """DevOps Agent responsible for infrastructure, deployments, containers, MT5 VPS setup, server health, and backups."""
 
     def __init__(self, message_bus: MessageBus):
         super().__init__(
@@ -32,6 +33,16 @@ class DevOpsAgent(BaseAgent):
         self.monitoring = SystemMonitor()
         self.backup = AutomatedBackup()
 
+    def setup_mt5_vps(self) -> Dict[str, Any]:
+        """Execute one-click MT5 & EA setup script."""
+        logger.info("DevOps Agent executing One-Click MT5 VPS & EA setup...")
+        res = subprocess.run(["./scripts/install_mt5_ea.sh"], capture_output=True, text=True)
+        return {
+            "status": "SUCCESS" if res.returncode == 0 else "FAILED",
+            "returncode": res.returncode,
+            "stdout": res.stdout,
+        }
+
     async def run_task_logic(self, task: Task) -> Dict[str, Any]:
         """Execute DevOps tasks."""
         action = task.parameters.get("action")
@@ -43,6 +54,9 @@ class DevOpsAgent(BaseAgent):
         elif action == "RESTART_CONTAINER":
             container = task.parameters.get("container", "genx_api")
             return self.docker_manager.restart_container(container)
+
+        elif action == "SETUP_MT5_VPS":
+            return self.setup_mt5_vps()
 
         elif action == "CHECK_SERVER_HEALTH":
             health = self.server_manager.get_server_health()

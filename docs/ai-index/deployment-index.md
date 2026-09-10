@@ -1,17 +1,17 @@
 # 🚀 Deployment Index
 
-Deployment workflows, one-click launcher scripts, and startup/shutdown procedures.
+Deployment workflows, one-click launcher scripts, MT5 VPS installer, and startup/shutdown procedures.
 
-## ⚡ One-Click Deployment Command
+## ⚡ One-Click Deployment Commands
 
+### System OS Launcher
 ```bash
 ./deploy.sh
 ```
 
-or
-
+### MT5 VPS & EA Private Hosting Installer (Ubuntu/Windows VPS)
 ```bash
-./scripts/deploy_jules.sh
+./scripts/install_mt5_ea.sh
 ```
 
 ## 🔄 Startup Sequence (Executed via `src/main.py` / `AgentOSOrchestrator`)
