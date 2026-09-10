@@ -1,31 +1,34 @@
-# GenX_FX Trading System
+# GenX_FX & Workspace Monorepo Integrated System
 
-A comprehensive AI-powered foreign exchange trading system with advanced market analysis and automated trading capabilities.
+A comprehensive AI-powered foreign exchange trading system and multi-agent workspace monorepo integration with advanced market analysis, automated trading capabilities, and OS-Twin / AgentBrain orchestration.
 
-## 🚀 Features
+## 🚀 Overview & Features
 
-- **AI-Powered Analysis**: Advanced machine learning models for market prediction
-- **Real-time Data**: Live market data integration from multiple sources
-- **Automated Trading**: Intelligent trading algorithms with risk management
-- **Multi-Platform Support**: Works with multiple brokers and exchanges
-- **Web Interface**: Modern React-based dashboard
-- **API Integration**: RESTful API for external integrations
+- **AI-Powered Analysis & AgentBrain**: Advanced machine learning models for market prediction and agent OS coordination.
+- **Real-time Data & MQL5 Synchronization**: Live market data integration from multiple sources including MT5, Google Drive, and OneDrive sync.
+- **Automated Trading & Domain Control**: Intelligent trading algorithms with risk management and domain controller automation scripts.
+- **OS-Twin & Setup**: System twin replication and automated deployment tools.
+- **Jules CLI & Tools Integration**: Command line control for continuous workspace syncing, agent plugins, and repository management.
 
-## 📁 Project Structure
+## 📁 Integrated Workspace Structure
 
 ```
-GenX_FX/
-├── src/                    # Source code
-├── tests/                  # Unit and integration tests
-├── docs/                   # Documentation
-├── config/                 # Configuration files
-├── scripts/                # Utility scripts
-├── assets/                 # Static assets
-├── data/                   # Data files and models
-├── .vscode/                # VS Code configuration
-├── requirements.txt        # Python dependencies
-├── GenX_FX.code-workspace # VS Code workspace file
-└── README.md              # This file
+Workspace / GenX_FX Monorepo
+├── src/                      # GenX_FX Core source code
+├── AgentBrain/               # AI Agent Brain modules and configuration
+├── DomainController/         # Domain control scripts and drive management
+├── MQL5-Google-Onedrive/     # MQL5 cloud & drive sync integration
+├── OS-Twin/                  # OS Twin framework
+├── OS-Twin-setup/            # OS Twin setup utilities
+├── scripts/                  # Project initialization and sync scripts
+├── cli/                      # Jules CLI and agent utilities
+├── tests/                    # Unit and integration tests
+├── docs/                     # Documentation
+├── config/                   # Configuration files
+├── .vscode/                  # VS Code configuration
+├── requirements.txt          # Python dependencies
+├── GenX_FX.code-workspace   # Multi-folder workspace configuration
+└── README.md                 # This file
 ```
 
 ## 🛠️ Setup Instructions
@@ -33,112 +36,37 @@ GenX_FX/
 ### Prerequisites
 - Python 3.11+
 - Node.js 18+
-- VS Code or Cursor IDE
+- VS Code, Cursor IDE, or JetBrains IntelliJ IDEA
 
-### Installation
+### Installation & Initialization
 
-1. Clone the repository:
+1. Clone or open the workspace:
    ```bash
-   git clone <repository-url>
-   cd GenX_FX
+   cd /app
    ```
 
-2. Create virtual environment:
+2. Initialize subprojects using the provided scripts:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ./scripts/setup.sh
+   ./scripts/init-all-projects.sh
    ```
 
-3. Install dependencies:
+3. Run Jules CLI for workspace status and continuous syncing:
    ```bash
-   pip install -r requirements.txt
+   jules status
+   jules sync --start
    ```
 
-4. Set up environment variables:
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
+## 💻 JetBrains & VS Code Integration
 
-5. Run the application:
-   ```bash
-   python src/main.py
-   ```
-
-## 💻 Development
-
-### VS Code Setup
-1. Open the workspace file: `GenX_FX.code-workspace`
-2. Install recommended extensions
-3. Configure your Python interpreter
-
-### Cursor Setup
-1. Open the project folder in Cursor
-2. Enable AI features for enhanced development
-3. Use the integrated terminal for commands
-
-### Code Formatting
-```bash
-# Format code
-black src/ tests/
-
-# Sort imports
-isort src/ tests/
-
-# Lint code
-flake8 src/ tests/
-```
+- **JetBrains IDE**: Deep Git4Idea integration (`jetbrains://idea/checkout/git?idea.required.plugins.id=Git4Idea&checkout.repo=git%40gitlab.com%3Agenxfx%2Fvscode-powershell.git`)
+- **VS Code / Cursor Workspace**: Open `GenX_FX.code-workspace` to access all integrated sub-projects and recommended extensions (`ms-vscode.powershell`, `Git4Idea`).
 
 ## 🧪 Testing
 ```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=src tests/
+python3 src/main.py
 ```
 
-## 📊 Trading Features
+## 📝 License & Disclaimer
 
-- **Strategy Engine**: Multiple trading strategies
-- **Risk Management**: Position sizing and stop-loss management
-- **Backtesting**: Historical data analysis
-- **Paper Trading**: Risk-free testing environment
-- **Live Trading**: Real money trading capabilities
-
-## 🔐 Security
-
-- Encrypted API keys
-- Secure authentication
-- Rate limiting
-- Audit logging
-
-## 📈 Performance
-
-- High-frequency trading support
-- Low-latency data processing
-- Scalable architecture
-- Real-time monitoring
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support
-
-For support, please contact:
-- Email: support@genxfx.com
-- Discord: [Join our community]
-- Documentation: [docs.genxfx.com]
-
-## ⚠️ Disclaimer
-
-This software is for educational and research purposes only. Trading involves risk and you should never trade with money you cannot afford to lose.
+Educational and research software. Trading involves risk.

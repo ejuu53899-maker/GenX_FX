@@ -1,0 +1,15 @@
+# OS-Twin Configuration
+
+[Storage]
+BackupLocation=/var/lib/os-twin/backups
+CompressionLevel=6
+MaxStorageSize=107374182400
+
+[Sync]
+SyncInterval=3600
+ConflictResolution=ask
+AutoSync=false
+
+[General]
+MaxSnapshots=10
+SnapshotRetentionDays=30

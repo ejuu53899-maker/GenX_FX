@@ -1,0 +1,21 @@
+# MQL5-Google-Onedrive Configuration
+
+[GoogleDrive]
+# Google OAuth Client ID
+ClientID=YOUR_CLIENT_ID
+ClientSecret=YOUR_CLIENT_SECRET
+
+# Sync Settings
+SyncInterval=300
+AutoSync=true
+SyncDirection=bidirectional
+
+# File Filters
+IncludePatterns=*.mq5,*.mqh,*.ex5
+ExcludePatterns=*.log,*.tst
+MaxFileSize=10485760
+
+# Backup Settings
+AutoBackup=true
+BackupInterval=3600
+KeepBackups=10

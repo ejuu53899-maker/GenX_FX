@@ -1,125 +1,47 @@
 {
-    // Editor Settings
-    "editor.fontSize": 14,
-    "editor.lineHeight": 1.5,
-    "editor.tabSize": 4,
-    "editor.insertSpaces": true,
-    "editor.wordWrap": "on",
-    "editor.minimap.enabled": true,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": true,
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": "explicit",
-        "source.fixAll": "explicit"
-    },
-    "editor.rulers": [80, 120],
-    "editor.renderWhitespace": "trailing",
-    
-    // Files Settings
-    "files.autoSave": "onFocusChange",
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/__pycache__": true,
-        "**/*.pyc": true,
-        "**/node_modules": true,
-        "**/dist": true,
-        "**/build": true,
-        "**/.venv": true,
-        "**/.env": true
-    },
-    
-    // Python Settings
-    "python.defaultInterpreterPath": "python",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": ["--line-length=88"],
-    "python.linting.flake8Args": ["--max-line-length=88"],
-    "python.testing.pytestEnabled": true,
-    "python.testing.unittestEnabled": false,
-    
-    // JavaScript/TypeScript Settings
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.preferences.quoteStyle": "double",
-    "typescript.preferences.quoteStyle": "double",
-    
-    // Git Settings
-    "git.autofetch": true,
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "gitlens.currentLine.enabled": false,
-    "gitlens.hovers.currentLine.over": "line",
-    
-    // Terminal Settings
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "terminal.integrated.fontSize": 13,
-    "terminal.integrated.cursorBlinking": true,
-    
-    // Workbench Settings
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Default Dark Modern",
-    "workbench.startupEditor": "welcomePage",
-    "workbench.editor.enablePreview": false,
-    
-    // Explorer Settings
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.compactFolders": false,
-    
-    // Search Settings
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/*.code-search": true,
-        "**/.venv": true,
-        "**/__pycache__": true
-    },
-    
-    // Extensions Settings
-    "extensions.autoUpdate": true,
-    "extensions.autoCheckUpdates": true,
-    
-    // Language Specific Settings
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        }
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[markdown]": {
-        "editor.wordWrap": "on",
-        "editor.quickSuggestions": {
-            "comments": "off",
-            "strings": "off",
-            "other": "off"
-        }
-    },
-    
-    // Live Server Settings
-    "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.donotVerifyTags": true,
-    
-    // Prettier Settings
-    "prettier.singleQuote": false,
-    "prettier.trailingComma": "es5",
-    "prettier.tabWidth": 2,
-    "prettier.semi": true
+  "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
+  "python.terminal.activateEnvironment": true,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+  "files.associations": {
+    "*.py": "python",
+    "*.js": "javascript",
+    "*.ts": "typescript",
+    "*.json": "json",
+    "*.md": "markdown",
+    "*.yml": "yaml",
+    "*.yaml": "yaml",
+    "*.ps1": "powershell"
+  },
+  "powershell.powerShellAdditionalExePaths": [
+    {
+      "exePath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "versionName": "Windows PowerShell"
+    }
+  ],
+  "git.checkout.repo": "git@gitlab.com:genxfx/vscode-powershell.git",
+  "jetbrains.requiredPlugins": [
+    "Git4Idea"
+  ]
 }

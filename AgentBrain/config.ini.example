@@ -1,0 +1,22 @@
+# AgentBrain Configuration
+
+[AI]
+ModelProvider=openai
+ModelName=gpt-4
+Temperature=0.7
+MaxTokens=2000
+
+[Memory]
+VectorDatabase=chroma
+MemoryLimit=1000
+ContextWindow=4096
+
+[Tasks]
+MaxConcurrentTasks=5
+TaskTimeout=300
+RetryAttempts=3
+
+[API]
+Port=8000
+Host=localhost
+EnableAuth=true
