@@ -2,3 +2,421 @@
 2025-10-11 14:52:07,922 - __main__ - INFO - Starting GenX_FX Trading System...
 2025-10-11 14:54:58,387 - __main__ - INFO - Initializing GenX_FX Trading System v1.0.0
 2025-10-11 14:54:58,389 - __main__ - INFO - Starting GenX_FX Trading System...
+2026-09-08 18:50:15,915 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-08 18:50:15,916 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-08 18:50:15,916 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-08 18:50:15,916 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-08 18:50:15,916 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-08 18:50:15,916 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-08 18:50:15,916 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-08 18:50:15,917 - agents.guardian.backup_check - INFO - Backup check passed: 5 files found in 'data'.
+2026-09-08 18:50:15,917 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 5}
+2026-09-08 18:50:15,917 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-08 18:50:15,917 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-08 18:50:15,917 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-08 18:50:15,917 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-08 18:50:15,917 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-08 18:50:15,917 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-08 18:50:15,917 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-08 18:50:15,917 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-08 18:50:15,918 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-08 18:50:15,918 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-08 18:50:15,918 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-08 18:50:15,918 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-08 18:50:15,918 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-08 18:50:15,918 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-08 18:50:15,918 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-08 18:50:15,918 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-08 18:50:15,918 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-08 18:50:15,918 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-08 18:50:15,918 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-08 18:50:15,918 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: Commander To: Commander
+2026-09-08 18:50:15,918 - agents.commander.memory - INFO - Agent 'Commander' registered in Commander Memory. Total active: 1
+2026-09-08 18:50:15,919 - agents.commander.commander_agent - INFO - Commander registered agent: Commander (Local AI Server Node)
+2026-09-08 18:50:15,919 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: Commander To: Commander
+2026-09-08 18:50:15,919 - agents.commander.memory - INFO - Agent 'Commander' registered in Commander Memory. Total active: 1
+2026-09-08 18:50:15,919 - agents.commander.commander_agent - INFO - Commander registered agent: Commander (Development Command Center)
+2026-09-08 18:50:15,919 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: Commander To: Commander
+2026-09-08 18:50:15,919 - agents.commander.memory - INFO - Agent 'Commander' registered in Commander Memory. Total active: 1
+2026-09-08 18:50:15,919 - agents.commander.commander_agent - INFO - Commander registered agent: Commander (Portable Skill Installer)
+2026-09-08 18:50:15,919 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!
+2026-09-08 20:05:05,863 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-08 20:05:05,864 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-08 20:05:05,864 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-08 20:05:05,864 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-08 20:05:05,864 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-08 20:05:05,864 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-08 20:05:05,865 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-08 20:05:05,865 - agents.guardian.backup_check - INFO - Backup check passed: 5 files found in 'data'.
+2026-09-08 20:05:05,865 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 5}
+2026-09-08 20:05:05,865 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-08 20:05:05,865 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-08 20:05:05,865 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-08 20:05:05,865 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-08 20:05:05,865 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-08 20:05:05,866 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-08 20:05:05,866 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-08 20:05:05,866 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-08 20:05:05,866 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-08 20:05:05,866 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-08 20:05:05,866 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-08 20:05:05,866 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-08 20:05:05,866 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-08 20:05:05,866 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-08 20:05:05,866 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-08 20:05:05,866 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-08 20:05:05,866 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-08 20:05:05,866 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-08 20:05:05,867 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-08 20:05:05,867 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: MiniPCWorker To: Commander
+2026-09-08 20:05:05,867 - agents.commander.memory - INFO - Agent 'MiniPCWorker' registered in Commander Memory. Total active: 1
+2026-09-08 20:05:05,867 - agents.commander.commander_agent - INFO - Commander registered agent: MiniPCWorker (Local AI Server Node)
+2026-09-08 20:05:05,867 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: LaptopWorker To: Commander
+2026-09-08 20:05:05,867 - agents.commander.memory - INFO - Agent 'LaptopWorker' registered in Commander Memory. Total active: 2
+2026-09-08 20:05:05,867 - agents.commander.commander_agent - INFO - Commander registered agent: LaptopWorker (Development Command Center)
+2026-09-08 20:05:05,867 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: USBIntelligenceWorker To: Commander
+2026-09-08 20:05:05,867 - agents.commander.memory - INFO - Agent 'USBIntelligenceWorker' registered in Commander Memory. Total active: 3
+2026-09-08 20:05:05,867 - agents.commander.commander_agent - INFO - Commander registered agent: USBIntelligenceWorker (Portable Skill Installer)
+2026-09-08 20:05:05,867 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!
+2026-09-09 06:41:56,693 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-09 06:41:56,694 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-09 06:41:56,694 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-09 06:41:56,694 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-09 06:41:56,694 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-09 06:41:56,694 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-09 06:41:56,694 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-09 06:41:56,695 - agents.guardian.backup_check - INFO - Backup check passed: 5 files found in 'data'.
+2026-09-09 06:41:56,695 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 5}
+2026-09-09 06:41:56,695 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-09 06:41:56,695 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-09 06:41:56,695 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-09 06:41:56,695 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-09 06:41:56,695 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 06:41:56,695 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 06:41:56,696 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-09 06:41:56,696 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-09 06:41:56,696 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-09 06:41:56,696 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-09 06:41:56,696 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-09 06:41:56,696 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-09 06:41:56,696 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-09 06:41:56,696 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 06:41:56,696 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 06:41:56,696 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-09 06:41:56,696 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-09 06:41:56,696 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 06:41:56,697 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 06:41:56,697 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: MiniPCWorker To: Commander
+2026-09-09 06:41:56,697 - agents.commander.memory - INFO - Agent 'MiniPCWorker' registered in Commander Memory. Total active: 1
+2026-09-09 06:41:56,697 - agents.commander.commander_agent - INFO - Commander registered agent: MiniPCWorker (Local AI Server Node)
+2026-09-09 06:41:56,697 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: LaptopWorker To: Commander
+2026-09-09 06:41:56,697 - agents.commander.memory - INFO - Agent 'LaptopWorker' registered in Commander Memory. Total active: 2
+2026-09-09 06:41:56,697 - agents.commander.commander_agent - INFO - Commander registered agent: LaptopWorker (Development Command Center)
+2026-09-09 06:41:56,697 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: USBIntelligenceWorker To: Commander
+2026-09-09 06:41:56,697 - agents.commander.memory - INFO - Agent 'USBIntelligenceWorker' registered in Commander Memory. Total active: 3
+2026-09-09 06:41:56,697 - agents.commander.commander_agent - INFO - Commander registered agent: USBIntelligenceWorker (Portable Skill Installer)
+2026-09-09 06:41:56,697 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!
+2026-09-09 13:25:56,712 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-09 13:25:56,713 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-09 13:25:56,713 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-09 13:25:56,713 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-09 13:25:56,713 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-09 13:25:56,713 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-09 13:25:56,713 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-09 13:25:56,714 - agents.guardian.backup_check - INFO - Backup check passed: 5 files found in 'data'.
+2026-09-09 13:25:56,714 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 5}
+2026-09-09 13:25:56,714 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-09 13:25:56,714 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-09 13:25:56,714 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-09 13:25:56,714 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-09 13:25:56,714 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 13:25:56,714 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 13:25:56,714 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-09 13:25:56,715 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-09 13:25:56,715 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-09 13:25:56,715 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-09 13:25:56,715 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-09 13:25:56,715 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-09 13:25:56,715 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-09 13:25:56,715 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 13:25:56,715 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 13:25:56,715 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-09 13:25:56,715 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-09 13:25:56,715 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 13:25:56,715 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 13:25:56,715 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: MiniPCWorker To: Commander
+2026-09-09 13:25:56,716 - agents.commander.memory - INFO - Agent 'MiniPCWorker' registered in Commander Memory. Total active: 1
+2026-09-09 13:25:56,716 - agents.commander.commander_agent - INFO - Commander registered agent: MiniPCWorker (Local AI Server Node)
+2026-09-09 13:25:56,716 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: LaptopWorker To: Commander
+2026-09-09 13:25:56,716 - agents.commander.memory - INFO - Agent 'LaptopWorker' registered in Commander Memory. Total active: 2
+2026-09-09 13:25:56,716 - agents.commander.commander_agent - INFO - Commander registered agent: LaptopWorker (Development Command Center)
+2026-09-09 13:25:56,716 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: USBIntelligenceWorker To: Commander
+2026-09-09 13:25:56,716 - agents.commander.memory - INFO - Agent 'USBIntelligenceWorker' registered in Commander Memory. Total active: 3
+2026-09-09 13:25:56,716 - agents.commander.commander_agent - INFO - Commander registered agent: USBIntelligenceWorker (Portable Skill Installer)
+2026-09-09 13:25:56,716 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!
+2026-09-09 13:44:02,098 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-09 13:44:02,099 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-09 13:44:02,099 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-09 13:44:02,099 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-09 13:44:02,099 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-09 13:44:02,100 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-09 13:44:02,100 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-09 13:44:02,100 - agents.guardian.backup_check - INFO - Backup check passed: 5 files found in 'data'.
+2026-09-09 13:44:02,100 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 5}
+2026-09-09 13:44:02,100 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-09 13:44:02,100 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-09 13:44:02,100 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-09 13:44:02,101 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-09 13:44:02,101 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 13:44:02,101 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 13:44:02,101 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-09 13:44:02,101 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-09 13:44:02,101 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-09 13:44:02,101 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-09 13:44:02,101 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-09 13:44:02,101 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-09 13:44:02,101 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-09 13:44:02,101 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 13:44:02,101 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 13:44:02,101 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-09 13:44:02,101 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-09 13:44:02,101 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 13:44:02,101 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 13:44:02,102 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: MiniPCWorker To: Commander
+2026-09-09 13:44:02,102 - agents.commander.memory - INFO - Agent 'MiniPCWorker' registered in Commander Memory. Total active: 1
+2026-09-09 13:44:02,102 - agents.commander.commander_agent - INFO - Commander registered agent: MiniPCWorker (Local AI Server Node)
+2026-09-09 13:44:02,102 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: LaptopWorker To: Commander
+2026-09-09 13:44:02,102 - agents.commander.memory - INFO - Agent 'LaptopWorker' registered in Commander Memory. Total active: 2
+2026-09-09 13:44:02,102 - agents.commander.commander_agent - INFO - Commander registered agent: LaptopWorker (Development Command Center)
+2026-09-09 13:44:02,102 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: USBIntelligenceWorker To: Commander
+2026-09-09 13:44:02,102 - agents.commander.memory - INFO - Agent 'USBIntelligenceWorker' registered in Commander Memory. Total active: 3
+2026-09-09 13:44:02,102 - agents.commander.commander_agent - INFO - Commander registered agent: USBIntelligenceWorker (Portable Skill Installer)
+2026-09-09 13:44:02,102 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!
+2026-09-09 16:11:45,455 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-09 16:11:45,457 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-09 16:11:45,457 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-09 16:11:45,457 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-09 16:11:45,457 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-09 16:11:45,457 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-09 16:11:45,457 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-09 16:11:45,458 - agents.guardian.backup_check - INFO - Backup check passed: 5 files found in 'data'.
+2026-09-09 16:11:45,458 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 5}
+2026-09-09 16:11:45,458 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-09 16:11:45,458 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-09 16:11:45,458 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-09 16:11:45,458 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-09 16:11:45,458 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 16:11:45,458 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 16:11:45,458 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-09 16:11:45,458 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-09 16:11:45,458 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-09 16:11:45,459 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-09 16:11:45,459 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-09 16:11:45,459 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-09 16:11:45,459 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-09 16:11:45,459 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 16:11:45,459 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 16:11:45,459 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-09 16:11:45,459 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-09 16:11:45,459 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 16:11:45,459 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 16:11:45,459 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: MiniPCWorker To: Commander
+2026-09-09 16:11:45,459 - agents.commander.memory - INFO - Agent 'MiniPCWorker' registered in Commander Memory. Total active: 1
+2026-09-09 16:11:45,460 - agents.commander.commander_agent - INFO - Commander registered agent: MiniPCWorker (Local AI Server Node)
+2026-09-09 16:11:45,460 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: LaptopWorker To: Commander
+2026-09-09 16:11:45,460 - agents.commander.memory - INFO - Agent 'LaptopWorker' registered in Commander Memory. Total active: 2
+2026-09-09 16:11:45,460 - agents.commander.commander_agent - INFO - Commander registered agent: LaptopWorker (Development Command Center)
+2026-09-09 16:11:45,460 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: USBIntelligenceWorker To: Commander
+2026-09-09 16:11:45,460 - agents.commander.memory - INFO - Agent 'USBIntelligenceWorker' registered in Commander Memory. Total active: 3
+2026-09-09 16:11:45,460 - agents.commander.commander_agent - INFO - Commander registered agent: USBIntelligenceWorker (Portable Skill Installer)
+2026-09-09 16:11:45,460 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!
+2026-09-09 16:45:01,258 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-09 16:45:01,260 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-09 16:45:01,260 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-09 16:45:01,260 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-09 16:45:01,260 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-09 16:45:01,260 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-09 16:45:01,260 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-09 16:45:01,261 - agents.guardian.backup_check - INFO - Backup check passed: 5 files found in 'data'.
+2026-09-09 16:45:01,261 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 5}
+2026-09-09 16:45:01,261 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-09 16:45:01,261 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-09 16:45:01,261 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-09 16:45:01,261 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-09 16:45:01,261 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 16:45:01,261 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 16:45:01,261 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-09 16:45:01,261 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-09 16:45:01,261 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-09 16:45:01,262 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-09 16:45:01,262 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-09 16:45:01,262 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-09 16:45:01,262 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-09 16:45:01,262 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 16:45:01,262 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 16:45:01,262 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-09 16:45:01,262 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-09 16:45:01,262 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-09 16:45:01,262 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-09 16:45:01,262 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: MiniPCWorker To: Commander
+2026-09-09 16:45:01,263 - agents.commander.memory - INFO - Agent 'MiniPCWorker' registered in Commander Memory. Total active: 1
+2026-09-09 16:45:01,263 - agents.commander.commander_agent - INFO - Commander registered agent: MiniPCWorker (Local AI Server Node)
+2026-09-09 16:45:01,263 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: LaptopWorker To: Commander
+2026-09-09 16:45:01,263 - agents.commander.memory - INFO - Agent 'LaptopWorker' registered in Commander Memory. Total active: 2
+2026-09-09 16:45:01,263 - agents.commander.commander_agent - INFO - Commander registered agent: LaptopWorker (Development Command Center)
+2026-09-09 16:45:01,263 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: USBIntelligenceWorker To: Commander
+2026-09-09 16:45:01,263 - agents.commander.memory - INFO - Agent 'USBIntelligenceWorker' registered in Commander Memory. Total active: 3
+2026-09-09 16:45:01,263 - agents.commander.commander_agent - INFO - Commander registered agent: USBIntelligenceWorker (Portable Skill Installer)
+2026-09-09 16:45:01,263 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!
+2026-09-10 00:01:41,037 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-10 00:01:41,038 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-10 00:01:41,038 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-10 00:01:41,038 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-10 00:01:41,038 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-10 00:01:41,038 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-10 00:01:41,039 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-10 00:01:41,039 - agents.guardian.backup_check - INFO - Backup check passed: 5 files found in 'data'.
+2026-09-10 00:01:41,039 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 5}
+2026-09-10 00:01:41,039 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-10 00:01:41,039 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-10 00:01:41,039 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-10 00:01:41,039 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-10 00:01:41,039 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 00:01:41,039 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 00:01:41,039 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-10 00:01:41,040 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-10 00:01:41,040 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-10 00:01:41,040 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-10 00:01:41,040 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-10 00:01:41,040 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-10 00:01:41,040 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-10 00:01:41,040 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 00:01:41,040 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 00:01:41,040 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-10 00:01:41,040 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-10 00:01:41,040 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 00:01:41,040 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 00:01:41,040 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: MiniPCWorker To: Commander
+2026-09-10 00:01:41,041 - agents.commander.memory - INFO - Agent 'MiniPCWorker' registered in Commander Memory. Total active: 1
+2026-09-10 00:01:41,041 - agents.commander.commander_agent - INFO - Commander registered agent: MiniPCWorker (Local AI Server Node)
+2026-09-10 00:01:41,041 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: LaptopWorker To: Commander
+2026-09-10 00:01:41,041 - agents.commander.memory - INFO - Agent 'LaptopWorker' registered in Commander Memory. Total active: 2
+2026-09-10 00:01:41,041 - agents.commander.commander_agent - INFO - Commander registered agent: LaptopWorker (Development Command Center)
+2026-09-10 00:01:41,041 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: USBIntelligenceWorker To: Commander
+2026-09-10 00:01:41,041 - agents.commander.memory - INFO - Agent 'USBIntelligenceWorker' registered in Commander Memory. Total active: 3
+2026-09-10 00:01:41,041 - agents.commander.commander_agent - INFO - Commander registered agent: USBIntelligenceWorker (Portable Skill Installer)
+2026-09-10 00:01:41,041 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!
+2026-09-10 00:58:44,344 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-10 00:58:44,346 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-10 00:58:44,346 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-10 00:58:44,346 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-10 00:58:44,346 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-10 00:58:44,346 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-10 00:58:44,347 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-10 00:58:44,347 - agents.guardian.backup_check - INFO - Backup check passed: 6 files found in 'data'.
+2026-09-10 00:58:44,347 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 6}
+2026-09-10 00:58:44,347 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-10 00:58:44,347 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-10 00:58:44,347 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-10 00:58:44,348 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-10 00:58:44,348 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 00:58:44,348 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 00:58:44,348 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-10 00:58:44,348 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-10 00:58:44,348 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-10 00:58:44,348 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-10 00:58:44,348 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-10 00:58:44,348 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-10 00:58:44,348 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-10 00:58:44,348 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 00:58:44,349 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 00:58:44,349 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-10 00:58:44,349 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-10 00:58:44,349 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 00:58:44,349 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 00:58:44,349 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: MiniPCWorker To: Commander
+2026-09-10 00:58:44,349 - agents.commander.memory - INFO - Agent 'MiniPCWorker' registered in Commander Memory. Total active: 1
+2026-09-10 00:58:44,349 - agents.commander.commander_agent - INFO - Commander registered agent: MiniPCWorker (Local AI Server Node)
+2026-09-10 00:58:44,349 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: LaptopWorker To: Commander
+2026-09-10 00:58:44,349 - agents.commander.memory - INFO - Agent 'LaptopWorker' registered in Commander Memory. Total active: 2
+2026-09-10 00:58:44,350 - agents.commander.commander_agent - INFO - Commander registered agent: LaptopWorker (Development Command Center)
+2026-09-10 00:58:44,350 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: USBIntelligenceWorker To: Commander
+2026-09-10 00:58:44,350 - agents.commander.memory - INFO - Agent 'USBIntelligenceWorker' registered in Commander Memory. Total active: 3
+2026-09-10 00:58:44,350 - agents.commander.commander_agent - INFO - Commander registered agent: USBIntelligenceWorker (Portable Skill Installer)
+2026-09-10 00:58:44,350 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!
+2026-09-10 02:00:24,978 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-10 02:00:24,979 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-10 02:00:24,979 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-10 02:00:24,979 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-10 02:00:24,979 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-10 02:00:24,979 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-10 02:00:24,979 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-10 02:00:24,980 - agents.guardian.backup_check - INFO - Backup check passed: 7 files found in 'data'.
+2026-09-10 02:00:24,980 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 7}
+2026-09-10 02:00:24,980 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-10 02:00:24,980 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-10 02:00:24,980 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-10 02:00:24,980 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-10 02:00:24,980 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 02:00:24,980 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 02:00:24,980 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-10 02:00:24,980 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-10 02:00:24,980 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-10 02:00:24,980 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-10 02:00:24,981 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-10 02:00:24,981 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-10 02:00:24,981 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-10 02:00:24,981 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 02:00:24,981 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 02:00:24,981 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-10 02:00:24,981 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-10 02:00:24,981 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 02:00:24,981 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 02:00:24,981 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: MiniPCWorker To: Commander
+2026-09-10 02:00:24,981 - agents.commander.memory - INFO - Agent 'MiniPCWorker' registered in Commander Memory. Total active: 1
+2026-09-10 02:00:24,981 - agents.commander.commander_agent - INFO - Commander registered agent: MiniPCWorker (Local AI Server Node)
+2026-09-10 02:00:24,981 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: LaptopWorker To: Commander
+2026-09-10 02:00:24,982 - agents.commander.memory - INFO - Agent 'LaptopWorker' registered in Commander Memory. Total active: 2
+2026-09-10 02:00:24,982 - agents.commander.commander_agent - INFO - Commander registered agent: LaptopWorker (Development Command Center)
+2026-09-10 02:00:24,982 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: USBIntelligenceWorker To: Commander
+2026-09-10 02:00:24,982 - agents.commander.memory - INFO - Agent 'USBIntelligenceWorker' registered in Commander Memory. Total active: 3
+2026-09-10 02:00:24,982 - agents.commander.commander_agent - INFO - Commander registered agent: USBIntelligenceWorker (Portable Skill Installer)
+2026-09-10 02:00:24,982 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!
+2026-09-10 06:25:24,084 - __main__ - INFO - Initializing GenX_FX Agent Mode System v3.6.9
+2026-09-10 06:25:24,085 - __main__ - INFO - Starting GenX_FX Agent Operating System...
+2026-09-10 06:25:24,085 - agents.orchestrator - INFO - === BEGINNING GENX 3.6.9 AGENT OS STARTUP SEQUENCE ===
+2026-09-10 06:25:24,085 - agents.orchestrator - INFO - Step 1: Starting Security Agent (Guardian)...
+2026-09-10 06:25:24,085 - agents.common.permissions - INFO - Registered agent 'Guardian' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-10 06:25:24,085 - agents.common.base_agent - INFO - Agent 'Guardian' (Security + Safety Agent) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-10 06:25:24,085 - agents.orchestrator - INFO - Step 2: Performing System Health Check...
+2026-09-10 06:25:24,086 - agents.guardian.backup_check - INFO - Backup check passed: 7 files found in 'data'.
+2026-09-10 06:25:24,086 - agents.orchestrator - INFO - Health Check Backup Verification: {'valid': True, 'file_count': 7}
+2026-09-10 06:25:24,086 - agents.orchestrator - INFO - Step 3: Starting Commander Agent (Central Brain)...
+2026-09-10 06:25:24,086 - agents.common.permissions - INFO - Registered agent 'Commander' with permission level LEVEL_5_FINANCIAL_OPERATIONS (5)
+2026-09-10 06:25:24,086 - agents.common.base_agent - INFO - Agent 'Commander' (Central Brain) initialized with level LEVEL_5_FINANCIAL_OPERATIONS.
+2026-09-10 06:25:24,086 - agents.orchestrator - INFO - Step 4: Loading System Skills...
+2026-09-10 06:25:24,086 - agents.common.permissions - INFO - Registered agent 'Builder' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 06:25:24,086 - agents.common.base_agent - INFO - Agent 'Builder' (AI Software Engineer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 06:25:24,086 - agents.common.permissions - INFO - Registered agent 'DevOps' with permission level LEVEL_3_DEPLOY (3)
+2026-09-10 06:25:24,086 - agents.common.base_agent - INFO - Agent 'DevOps' (Infrastructure Engineer) initialized with level LEVEL_3_DEPLOY.
+2026-09-10 06:25:24,086 - agents.common.permissions - INFO - Registered agent 'Trading' with permission level LEVEL_1_ANALYZE (1)
+2026-09-10 06:25:24,086 - agents.common.base_agent - INFO - Agent 'Trading' (Financial Analysis Worker) initialized with level LEVEL_1_ANALYZE.
+2026-09-10 06:25:24,087 - agents.common.base_agent - INFO - Skill 'CoreMarketScanner' v1.0.0 imported into agent 'Trading'.
+2026-09-10 06:25:24,087 - agents.orchestrator - INFO - Step 5: Connecting Devices & Nodes...
+2026-09-10 06:25:24,087 - agents.orchestrator - INFO - Step 6: Starting Device Worker Agents (Mini PC, Laptop, USB Intelligence)...
+2026-09-10 06:25:24,087 - agents.common.permissions - INFO - Registered agent 'MiniPCWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 06:25:24,087 - agents.common.base_agent - INFO - Agent 'MiniPCWorker' (Local AI Server Node) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 06:25:24,087 - agents.common.permissions - INFO - Registered agent 'LaptopWorker' with permission level LEVEL_3_DEPLOY (3)
+2026-09-10 06:25:24,087 - agents.common.base_agent - INFO - Agent 'LaptopWorker' (Development Command Center) initialized with level LEVEL_3_DEPLOY.
+2026-09-10 06:25:24,087 - agents.common.permissions - INFO - Registered agent 'USBIntelligenceWorker' with permission level LEVEL_2_CREATE_FILES (2)
+2026-09-10 06:25:24,087 - agents.common.base_agent - INFO - Agent 'USBIntelligenceWorker' (Portable Skill Installer) initialized with level LEVEL_2_CREATE_FILES.
+2026-09-10 06:25:24,087 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: MiniPCWorker To: Commander
+2026-09-10 06:25:24,087 - agents.commander.memory - INFO - Agent 'MiniPCWorker' registered in Commander Memory. Total active: 1
+2026-09-10 06:25:24,087 - agents.commander.commander_agent - INFO - Commander registered agent: MiniPCWorker (Local AI Server Node)
+2026-09-10 06:25:24,088 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: LaptopWorker To: Commander
+2026-09-10 06:25:24,088 - agents.commander.memory - INFO - Agent 'LaptopWorker' registered in Commander Memory. Total active: 2
+2026-09-10 06:25:24,088 - agents.commander.commander_agent - INFO - Commander registered agent: LaptopWorker (Development Command Center)
+2026-09-10 06:25:24,088 - agents.common.message_bus - INFO - Message Bus [Topic: commander.register_agent] From: USBIntelligenceWorker To: Commander
+2026-09-10 06:25:24,088 - agents.commander.memory - INFO - Agent 'USBIntelligenceWorker' registered in Commander Memory. Total active: 3
+2026-09-10 06:25:24,088 - agents.commander.commander_agent - INFO - Commander registered agent: USBIntelligenceWorker (Portable Skill Installer)
+2026-09-10 06:25:24,088 - agents.orchestrator - INFO - Step 7: Startup Sequence Complete. Beginning Operations!

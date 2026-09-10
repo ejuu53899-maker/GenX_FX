@@ -1,0 +1,47 @@
+{
+  "project": "GenX_FX Trading System - GENX 3.6.9 Agent OS",
+  "version": "3.6.9",
+  "components": [
+    "CommanderAgent",
+    "BuilderAgent",
+    "DevOpsAgent",
+    "TradingAgent",
+    "GuardianAgent",
+    "MiniPCAgent",
+    "LaptopAgent",
+    "USBIntelligenceAgent",
+    "MessageBus",
+    "PermissionManager",
+    "LearningLoopManager",
+    "AgentOSOrchestrator",
+    "VaultEngine",
+    "VaultEncryption",
+    "AISecretGuardian",
+    "GenXVaultCLI"
+  ],
+  "technologies": [
+    "Python 3.12",
+    "FastAPI",
+    "Pydantic",
+    "Pytest",
+    "Docker",
+    "GitLab CI/CD",
+    "GitLab Runner",
+    "Firebase",
+    "Google Cloud",
+    "MetaTrader 5"
+  ],
+  "keywords": [
+    "AI Agent",
+    "Autonomous OS",
+    "Commander Agent",
+    "Guardian Agent",
+    "Trading Engine",
+    "Risk Manager",
+    "Secret Vault",
+    "One-Click Deployment",
+    "Jules Deployment",
+    "Warp Console",
+    "BLUEDIM Mini PC"
+  ]
+}

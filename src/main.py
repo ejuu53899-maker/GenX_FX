@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """
-GenX_FX Main Application
-A comprehensive trading system with AI-powered analysis
+GenX_FX Main Application - GENX 3.6.9 Agent Operating System
 """
 
 import sys
+import asyncio
 from pathlib import Path
 import logging
 
 # Add project root to path
 project_root = Path(__file__).parent.parent
 sys.path.append(str(project_root))
+
+from agents.orchestrator import AgentOSOrchestrator
+
+# Ensure logs directory exists
+Path('logs').mkdir(exist_ok=True)
 
 # Configure logging
 logging.basicConfig(
@@ -26,24 +31,27 @@ logger = logging.getLogger(__name__)
 
 
 class GenXFXApp:
-    """Main application class for GenX_FX trading system"""
-    
+    """Main application class for GenX 3.6.9 Autonomous Device Intelligence Operating System"""
+
     def __init__(self):
-        self.version = "1.0.0"
-        self.name = "GenX_FX Trading System"
+        self.version = "3.6.9"
+        self.name = "GenX_FX Agent Mode System"
+        self.orchestrator = AgentOSOrchestrator()
         logger.info(f"Initializing {self.name} v{self.version}")
-    
-    def start(self):
-        """Start the GenX_FX application"""
-        logger.info("Starting GenX_FX Trading System...")
+
+    async def start(self):
+        """Start the GenX_FX application and agent startup sequence"""
+        logger.info("Starting GenX_FX Agent Operating System...")
         print(f"Welcome to {self.name} v{self.version}")
-        print("System initialized successfully!")
         
-        # TODO: Add trading system initialization
-        # TODO: Add AI model loading
-        # TODO: Add market data connection
-        
-    def stop(self):
+        # Execute 7-step startup sequence
+        success = await self.orchestrator.run_startup_sequence()
+        if success:
+            print("GENX 3.6.9 Agent OS initialized and running successfully!")
+        else:
+            print("GENX 3.6.9 Agent OS startup encountered warnings.")
+
+    async def stop(self):
         """Stop the GenX_FX application"""
         logger.info("Stopping GenX_FX Trading System...")
         print("GenX_FX system stopped.")
@@ -52,12 +60,12 @@ class GenXFXApp:
 def main():
     """Main entry point"""
     app = GenXFXApp()
-    
+
     try:
-        app.start()
+        asyncio.run(app.start())
     except KeyboardInterrupt:
         logger.info("Shutdown requested by user")
-        app.stop()
+        asyncio.run(app.stop())
     except Exception as e:
         logger.error(f"Unexpected error: {e}")
         sys.exit(1)
