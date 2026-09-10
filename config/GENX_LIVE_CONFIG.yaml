@@ -1,0 +1,75 @@
+# GENX Autonomous AI Trading Network v3.6.9
+# REAL ACCOUNT PRODUCTION MODE CONFIGURATION
+
+version: "3.6.9"
+system: "GENX Autonomous AI Trading Network v3.6.9"
+mode: "REAL ACCOUNT PRODUCTION MODE"
+owner: "NUNA"
+operator: "Jules AI Agent"
+trading_mode: "LIVE PRODUCTION"
+live_trading: true
+
+broker:
+  name: "FxPro MT5 / Approved Broker Account"
+  server: "FxPro-Real"
+  platform: "MetaTrader 5"
+  account_type: "Real"
+
+infrastructure:
+  primary_vps: "Contabo VPS 4"
+  edge_device: "Mini PC BLUEDIM"
+  mobile_control: "Mobile Control Console"
+
+live_mode_checks:
+  vps_online: true
+  mt5_connected: true
+  broker_account_verified: true
+  ea_signature_verified: true
+  risk_manager_active: true
+  emergency_stop_tested: true
+
+risk_management:
+  account_mode: "LIVE"
+  risk_per_trade_pct_min: 0.5
+  risk_per_trade_pct_max: 1.0
+  max_daily_loss_pct: 2.0
+  max_drawdown_pct: 10.0
+  max_open_positions: 5
+  lot_size_calculation: "Dynamic Risk Calculation"
+
+ea_config:
+  name: "ExpertMAPSAR_GenX_v5_Portfolio_Risk_Manager"
+  signature_required: true
+  version: "v5"
+
+vault:
+  path: "GENX_VAULT"
+  credentials:
+    broker: "GENX_VAULT/broker/fxpro.env"
+    ai: "GENX_VAULT/ai/gemini.env"
+    cloud: "GENX_VAULT/cloud/firebase.env"
+    telegram: "GENX_VAULT/telegram/bot.env"
+  rules:
+    no_passwords_in_ea: true
+    no_api_keys_in_code: true
+    no_credentials_in_github: true
+
+jules_role:
+  trader: false
+  risk_supervisor: true
+  execution_controller: true
+  system_monitor: true
+  strategy_assistant: true
+  trade_journal_manager: true
+  decision_pipeline: "Market Data -> AI Analysis -> Risk Validation -> EA Execution -> Trade Journal"
+
+staged_deployment:
+  stage_1:
+    description: "Small Live Account -> Verify execution -> Verify spread/slippage"
+    status: "ACTIVE"
+  stage_2:
+    description: "Increase capital slowly -> Optimize strategy"
+    status: "PENDING"
+  stage_3:
+    description: "Full GENX Autonomous Operation"
+    status: "PENDING"
