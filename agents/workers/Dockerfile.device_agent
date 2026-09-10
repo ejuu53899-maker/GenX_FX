@@ -1,0 +1,9 @@
+FROM python:3.12-slim
+
+WORKDIR /opt/GENX-device
+
+COPY . /opt/GENX-device
+
+RUN pip install --no-cache-dir pyyaml pydantic
+
+CMD ["python3", "-c", "from agents.workers.genx_device_agent import GENXDeviceAgent; agent = GENXDeviceAgent(); print(agent.get_telemetry())"]
