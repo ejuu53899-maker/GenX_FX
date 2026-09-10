@@ -1,7 +1,28 @@
 {
     "folders": [
         {
+            "name": "GenX_FX Root",
             "path": "."
+        },
+        {
+            "name": "AgentBrain",
+            "path": "AgentBrain"
+        },
+        {
+            "name": "DomainController",
+            "path": "DomainController"
+        },
+        {
+            "name": "MQL5-Google-Onedrive",
+            "path": "MQL5-Google-Onedrive"
+        },
+        {
+            "name": "OS-Twin",
+            "path": "OS-Twin"
+        },
+        {
+            "name": "OS-Twin-setup",
+            "path": "OS-Twin-setup"
         }
     ],
     "settings": {
@@ -12,12 +33,14 @@
             "*.json": "json",
             "*.md": "markdown",
             "*.yml": "yaml",
-            "*.yaml": "yaml"
+            "*.yaml": "yaml",
+            "*.ps1": "powershell"
         },
         "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
         "python.terminal.activateEnvironment": true,
         "terminal.integrated.cwd": "${workspaceFolder}",
-        "git.ignoreLimitWarning": true
+        "git.ignoreLimitWarning": true,
+        "git.checkout.repo": "git@gitlab.com:genxfx/vscode-powershell.git"
     },
     "launch": {
         "version": "0.2.0",
