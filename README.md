@@ -1,9 +1,16 @@
 # GenX_FX Trading System
 
-A comprehensive AI-powered foreign exchange trading system with advanced market analysis and automated trading capabilities.
+A comprehensive AI-powered foreign exchange trading system with advanced market analysis, automated trading capabilities, and Google Cloud Data Agent Kit integration.
 
 ## 🚀 Features
 
+- **Google Cloud Data Agent Kit**: Full starter pack and intelligent IDE interface for Google Cloud Data ecosystem
+  - **BigQuery Connector & NL2SQL**: Natural language to BigQuery SQL translation and cost estimation
+  - **Cloud Storage Data Lakes**: Automated ingestion and parquet dataset management
+  - **Vertex AI Gemini Agent**: Autonomous data reasoning and market insight generation
+  - **AI Data Agents**: Specialized agents for Analytics (`DataAnalystAgent`), Pipelines (`DataPipelineAgent`), Quality Audits (`DataQualityAgent`), and Security (`DataGovernanceAgent`)
+  - **Starter Pack Scaffolding**: One-command project templates (`bigquery-analytics`, `financial-pipeline`, `realtime-stream`, `vertex-data-agent`)
+  - **IDE Extensions & Tasks**: Preset workspace settings, tasks, and prompt context providers for Cursor IDE and VS Code
 - **AI-Powered Analysis**: Advanced machine learning models for market prediction
 - **Real-time Data**: Live market data integration from multiple sources
 - **Automated Trading**: Intelligent trading algorithms with risk management
@@ -15,18 +22,54 @@ A comprehensive AI-powered foreign exchange trading system with advanced market 
 
 ```
 GenX_FX/
-├── src/                    # Source code
-├── tests/                  # Unit and integration tests
-├── docs/                   # Documentation
-├── config/                 # Configuration files
-├── scripts/                # Utility scripts
-├── assets/                 # Static assets
-├── data/                   # Data files and models
-├── .vscode/                # VS Code configuration
-├── requirements.txt        # Python dependencies
-├── GenX_FX.code-workspace # VS Code workspace file
-└── README.md              # This file
+├── src/
+│   ├── main.py                     # Main application entry point
+│   └── cloud_data_agent_kit/       # Google Cloud Data Agent Kit
+│       ├── agents/                 # Analyst, Pipeline, Quality, Governance AI Agents
+│       ├── connectors/             # BigQuery, GCS, Vertex AI connectors
+│       ├── starter_pack/           # Templates and scaffolding generator
+│       ├── ide_integration/        # VS Code / Cursor IDE providers & prompt context
+│       └── cli.py                  # `cloud-data-agent` CLI interface
+├── tests/                          # Unit and integration tests
+├── docs/                           # Documentation
+├── config/                         # Configuration files
+├── scripts/                        # Utility scripts
+├── assets/                         # Static assets
+├── data/                           # Data files and models
+├── .vscode/                        # VS Code workspace settings and tasks
+├── .cursor/                        # Cursor IDE settings and AI rules
+├── requirements.txt                # Python dependencies
+├── GenX_FX.code-workspace         # Multi-root VS Code workspace file
+└── README.md                       # This file
 ```
+
+## ☁️ Cloud Data Agent Kit (Starter Pack & IDE Integration)
+
+### CLI Commands
+Use the `cloud-data-agent` CLI tool directly from your IDE terminal:
+
+```bash
+# List available starter packs
+python -m cloud_data_agent_kit.cli list-starters
+
+# Scaffold a new BigQuery analytics starter pack project
+python -m cloud_data_agent_kit.cli scaffold --template bigquery-analytics --dir ./my_data_starter
+
+# Run natural language query via Data Analyst Agent
+python -m cloud_data_agent_kit.cli query --prompt "Show top market pairs by volume"
+
+# Run automated data quality audit on BigQuery table
+python -m cloud_data_agent_kit.cli audit --dataset market_data --table ticks
+
+# Export IDE configuration JSON
+python -m cloud_data_agent_kit.cli ide-config
+```
+
+### Starter Pack Templates
+- `bigquery-analytics`: BigQuery SQL analytics, NL2SQL translation, and automated market insights.
+- `financial-pipeline`: Market data ETL ingestion pipeline from Cloud Storage to BigQuery with data quality validation.
+- `realtime-stream`: High-throughput market stream ingestion into BigQuery.
+- `vertex-data-agent`: Autonomous Vertex AI Gemini data reasoning agent with PII and governance rules.
 
 ## 🛠️ Setup Instructions
 
@@ -69,13 +112,13 @@ GenX_FX/
 
 ### VS Code Setup
 1. Open the workspace file: `GenX_FX.code-workspace`
-2. Install recommended extensions
+2. Install recommended extensions (including Google Cloud Code)
 3. Configure your Python interpreter
 
 ### Cursor Setup
 1. Open the project folder in Cursor
 2. Enable AI features for enhanced development
-3. Use the integrated terminal for commands
+3. Use the integrated terminal for commands and starter pack scaffolding
 
 ### Code Formatting
 ```bash
@@ -110,6 +153,7 @@ pytest --cov=src tests/
 
 - Encrypted API keys
 - Secure authentication
+- Data governance & PII scanning (`DataGovernanceAgent`)
 - Rate limiting
 - Audit logging
 
@@ -117,7 +161,7 @@ pytest --cov=src tests/
 
 - High-frequency trading support
 - Low-latency data processing
-- Scalable architecture
+- Scalable Google Cloud BigQuery & Storage architecture
 - Real-time monitoring
 
 ## 🤝 Contributing
