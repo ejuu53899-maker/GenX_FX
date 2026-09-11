@@ -2,16 +2,3 @@
 2025-10-11 14:52:07,922 - __main__ - INFO - Starting GenX_FX Trading System...
 2025-10-11 14:54:58,387 - __main__ - INFO - Initializing GenX_FX Trading System v1.0.0
 2025-10-11 14:54:58,389 - __main__ - INFO - Starting GenX_FX Trading System...
-2026-09-11 11:36:39,614 - __main__ - INFO - Initializing GENX Hybrid AI Agent Network v3.6.9
-2026-09-11 11:36:39,615 - src.core.agent_controller.router - INFO - Registered agent GENX-TRADER-001 (Trading Intelligence Specialist)
-2026-09-11 11:36:39,615 - src.core.agent_controller.router - INFO - Registered agent GENX-CODER-001 (Software Engineering & System Builder)
-2026-09-11 11:36:39,615 - src.core.agent_controller.router - INFO - Registered agent GENX-SECURITY-001 (Security Gatekeeper & Secret Vault Guardian)
-2026-09-11 11:36:39,615 - src.core.agent_controller.router - INFO - Registered agent GENX-DEVICE-001 (Edge Infrastructure Orchestrator)
-2026-09-11 11:36:39,615 - src.network.device_controller - INFO - Registered device MINIPC-01 (Mini PC - Ubuntu 22.04 LTS)
-2026-09-11 11:36:39,615 - src.network.device_controller - INFO - Registered device VPS-CONTABO-01 (VPS - Ubuntu 24.04 LTS)
-2026-09-11 11:36:39,615 - src.network.device_controller - INFO - Registered device LAPTOP-DEV-01 (Laptop - Windows 11 Pro)
-2026-09-11 11:36:39,615 - src.skills.plugin_manager - INFO - Registered skill 'mt5_connector' (v2.1.0)
-2026-09-11 11:36:39,615 - src.skills.plugin_manager - INFO - Registered skill 'telegram_control' (v1.0.0)
-2026-09-11 11:36:39,615 - src.missions.mission_engine - INFO - Registered mission 'Start GENX Trading Mission' (START_GENX_TRADING)
-2026-09-11 11:36:39,615 - __main__ - INFO - Starting GENX Hybrid AI Agent Network v3.6.9 Control Plane...
-2026-09-11 11:36:39,615 - src.core.agent_controller.orchestrator - INFO - Processing user command: 'Analyze XAUUSD market' [session=default_session]
