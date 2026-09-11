@@ -5,6 +5,10 @@
         }
     ],
     "settings": {
+        "cloudDataAgentKit.enabled": true,
+        "cloudDataAgentKit.defaultProjectId": "genx-fx-trading",
+        "cloudDataAgentKit.defaultDataset": "market_data",
+        "cloudDataAgentKit.autoExplainSQL": true,
         "files.associations": {
             "*.py": "python",
             "*.js": "javascript",
@@ -15,6 +19,7 @@
             "*.yaml": "yaml"
         },
         "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
+        "python.analysis.extraPaths": ["./src"],
         "python.terminal.activateEnvironment": true,
         "terminal.integrated.cwd": "${workspaceFolder}",
         "git.ignoreLimitWarning": true
@@ -29,6 +34,15 @@
                 "program": "${file}",
                 "console": "integratedTerminal",
                 "cwd": "${workspaceFolder}"
+            },
+            {
+                "name": "Cloud Data Agent Kit CLI",
+                "type": "python",
+                "request": "launch",
+                "module": "cloud_data_agent_kit.cli",
+                "args": ["list-starters"],
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder}/src"
             },
             {
                 "name": "Python: FastAPI",
@@ -51,6 +65,38 @@
     "tasks": {
         "version": "2.0.0",
         "tasks": [
+            {
+                "label": "Cloud Data Agent: Scaffold Starter Pack",
+                "type": "shell",
+                "command": "python",
+                "args": ["-m", "cloud_data_agent_kit.cli", "scaffold", "--template", "bigquery-analytics", "--dir", "./cloud_starter"],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}/src"
+                }
+            },
+            {
+                "label": "Cloud Data Agent: Run Data Quality Audit",
+                "type": "shell",
+                "command": "python",
+                "args": ["-m", "cloud_data_agent_kit.cli", "audit", "--dataset", "market_data", "--table", "ticks"],
+                "group": "test",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}/src"
+                }
+            },
             {
                 "label": "Install Python Dependencies",
                 "type": "shell",
@@ -103,6 +149,7 @@
     },
     "extensions": {
         "recommendations": [
+            "googlecloudtools.cloudcode",
             "ms-python.python",
             "ms-python.black-formatter",
             "ms-python.autopep8",
