@@ -45,12 +45,14 @@ backup/
 # AWS
 awscliv2.zip
 
-# Local development directories (submodules)
+# Local development directories (submodules / monorepos)
 Development/
 all in once/
 Program Files/
 gemini_mcp_server/
 genx-cli/
+JetBrainsMono/
+ZOLO-A6-9VxNUNA-/
 
 # Application specific
 amp_monitor_config.json

@@ -1,7 +1,16 @@
 {
     "folders": [
         {
+            "name": "GenX_FX Core",
             "path": "."
+        },
+        {
+            "name": "ZOLO-A6-9VxNUNA-",
+            "path": "ZOLO-A6-9VxNUNA-"
+        },
+        {
+            "name": "JetBrainsMono",
+            "path": "JetBrainsMono"
         }
     ],
     "settings": {
@@ -36,6 +45,15 @@
                 "cwd": "${workspaceFolder}"
             },
             {
+                "name": "Start Jules Always-On Engine",
+                "type": "python",
+                "request": "launch",
+                "program": "${workspaceFolder}/src/main.py",
+                "args": ["--always-on"],
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder}"
+            },
+            {
                 "name": "Cloud Data Agent Kit CLI",
                 "type": "python",
                 "request": "launch",
@@ -43,28 +61,42 @@
                 "args": ["list-starters"],
                 "console": "integratedTerminal",
                 "cwd": "${workspaceFolder}/src"
-            },
-            {
-                "name": "Python: FastAPI",
-                "type": "python",
-                "request": "launch",
-                "module": "uvicorn",
-                "args": ["src.main:app", "--reload"],
-                "console": "integratedTerminal",
-                "cwd": "${workspaceFolder}"
-            },
-            {
-                "name": "Node.js: Current File",
-                "type": "node",
-                "request": "launch",
-                "program": "${file}",
-                "cwd": "${workspaceFolder}"
             }
         ]
     },
     "tasks": {
         "version": "2.0.0",
         "tasks": [
+            {
+                "label": "Sync Workspace Subprojects",
+                "type": "shell",
+                "command": "./scripts/sync_workspace.sh",
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
+                "label": "Start Jules Always-On Engine (1-Click)",
+                "type": "shell",
+                "command": "./scripts/start_jules_always_on_engine.sh",
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
             {
                 "label": "Cloud Data Agent: Scaffold Starter Pack",
                 "type": "shell",
@@ -82,59 +114,11 @@
                 }
             },
             {
-                "label": "Cloud Data Agent: Run Data Quality Audit",
-                "type": "shell",
-                "command": "python",
-                "args": ["-m", "cloud_data_agent_kit.cli", "audit", "--dataset", "market_data", "--table", "ticks"],
-                "group": "test",
-                "presentation": {
-                    "echo": true,
-                    "reveal": "always",
-                    "focus": false,
-                    "panel": "shared"
-                },
-                "options": {
-                    "cwd": "${workspaceFolder}/src"
-                }
-            },
-            {
-                "label": "Install Python Dependencies",
-                "type": "shell",
-                "command": "pip",
-                "args": ["install", "-r", "requirements.txt"],
-                "group": "build",
-                "presentation": {
-                    "echo": true,
-                    "reveal": "always",
-                    "focus": false,
-                    "panel": "shared"
-                },
-                "options": {
-                    "cwd": "${workspaceFolder}"
-                }
-            },
-            {
                 "label": "Run Tests",
                 "type": "shell",
                 "command": "python",
                 "args": ["-m", "pytest", "tests/", "-v"],
                 "group": "test",
-                "presentation": {
-                    "echo": true,
-                    "reveal": "always",
-                    "focus": false,
-                    "panel": "shared"
-                },
-                "options": {
-                    "cwd": "${workspaceFolder}"
-                }
-            },
-            {
-                "label": "Format Code",
-                "type": "shell",
-                "command": "black",
-                "args": ["src/", "tests/"],
-                "group": "build",
                 "presentation": {
                     "echo": true,
                     "reveal": "always",
@@ -157,9 +141,7 @@
             "eamodio.gitlens",
             "github.copilot",
             "github.copilot-chat",
-            "pkief.material-icon-theme",
-            "ms-vscode.powershell",
-            "ms-vscode.vscode-json"
+            "pkief.material-icon-theme"
         ]
     }
 }

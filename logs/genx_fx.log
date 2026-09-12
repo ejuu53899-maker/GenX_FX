@@ -2,3 +2,21 @@
 2025-10-11 14:52:07,922 - __main__ - INFO - Starting GenX_FX Trading System...
 2025-10-11 14:54:58,387 - __main__ - INFO - Initializing GenX_FX Trading System v1.0.0
 2025-10-11 14:54:58,389 - __main__ - INFO - Starting GenX_FX Trading System...
+2026-09-12 19:35:39,010 - __main__ - INFO - Initializing GenX_FX Trading System v1.0.0
+2026-09-12 19:35:39,011 - cloud_data_agent_kit.connectors.bigquery_connector - INFO - BigQueryConnector: running in mock mode.
+2026-09-12 19:35:39,011 - cloud_data_agent_kit.connectors.vertex_connector - INFO - VertexAIConnector: running in mock mode.
+2026-09-12 19:35:39,011 - cloud_data_agent_kit.connectors.gcs_connector - INFO - GCSConnector: running in mock mode.
+2026-09-12 19:35:39,011 - cloud_data_agent_kit.connectors.bigquery_connector - INFO - BigQueryConnector: running in mock mode.
+2026-09-12 19:35:39,011 - cloud_data_agent_kit.connectors.bigquery_connector - INFO - BigQueryConnector: running in mock mode.
+2026-09-12 19:35:39,013 - trading.jules_position_manager - INFO - JulesPositionManager Engine initialized with Real-Time Profit Guardian.
+2026-09-12 19:35:39,013 - __main__ - INFO - Jules Always-On Positioning System Engine Initialized.
+2026-09-12 19:35:39,013 - __main__ - INFO - Starting GenX_FX Trading System...
+2026-09-12 19:35:39,014 - trading.jules_position_manager - INFO - Jules position manager taking control of Ticket #1001 (EURUSD BUY @ 1.084)
+2026-09-12 19:35:39,014 - trading.jules_position_manager - INFO - Jules position manager taking control of Ticket #1002 (BTCUSD BUY @ 62000.0)
+2026-09-12 19:35:39,014 - trading.jules_position_manager - INFO - Jules position manager taking control of Ticket #1003 (GBPUSD SELL @ 1.295)
+2026-09-12 19:35:39,014 - trading.jules_position_manager - INFO - Ticket #1001 (EURUSD): Profit locked at $14.50
+2026-09-12 19:35:39,014 - trading.jules_position_manager - INFO - ✅ MANDATORY PROFIT RULE EXECUTED: Closed Ticket #1001 (EURUSD) with +$15.00 profit!
+2026-09-12 19:35:39,014 - trading.jules_position_manager - INFO - Ticket #1002 (BTCUSD): Profit locked at $19.50
+2026-09-12 19:35:39,014 - trading.jules_position_manager - INFO - ✅ MANDATORY PROFIT RULE EXECUTED: Closed Ticket #1002 (BTCUSD) with +$20.00 profit!
+2026-09-12 19:35:39,014 - trading.jules_position_manager - INFO - Ticket #1003 (GBPUSD): Profit locked at $29.50
+2026-09-12 19:35:39,014 - trading.jules_position_manager - INFO - ✅ MANDATORY PROFIT RULE EXECUTED: Closed Ticket #1003 (GBPUSD) with +$30.00 profit!
