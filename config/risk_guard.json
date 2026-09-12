@@ -1,0 +1,50 @@
+{
+  "system": "GENX Autonomous AI Trading Network v3.6.9",
+  "version": "3.6.9",
+  "owner": "NUNA",
+  "operator": "Jules AI Agent",
+  "account_mode": "LIVE",
+  "capital_protection": {
+    "risk_per_trade_min_pct": 0.5,
+    "risk_per_trade_max_pct": 1.0,
+    "max_daily_loss_pct": 2.0,
+    "max_drawdown_pct": 10.0,
+    "max_open_positions": 5,
+    "lot_size_calculation": "dynamic"
+  },
+  "live_mode_checks": {
+    "vps_online_check": true,
+    "mt5_connected_check": true,
+    "broker_account_verified": true,
+    "ea_signature_verified": true,
+    "risk_manager_active": true,
+    "emergency_stop_tested": true
+  },
+  "emergency_stop": {
+    "command": "JULES: EMERGENCY STOP",
+    "action_pipeline": [
+      "STOP NEW ORDERS",
+      "SAVE POSITIONS",
+      "BACKUP DATA",
+      "NOTIFY OWNER"
+    ],
+    "triggers": [
+      "Drawdown > 10%",
+      "Daily Loss > 2%",
+      "MT5 Disconnected > 30s",
+      "Unauthorized EA Modification"
+    ]
+  },
+  "vault_security_rules": {
+    "no_passwords_in_ea": true,
+    "no_api_keys_in_code": true,
+    "no_credentials_in_github": true,
+    "vault_dir": "GENX_VAULT",
+    "credentials_files": {
+      "broker": "GENX_VAULT/broker/fxpro.env",
+      "ai": "GENX_VAULT/ai/gemini.env",
+      "cloud": "GENX_VAULT/cloud/firebase.env",
+      "telegram": "GENX_VAULT/telegram/bot.env"
+    }
+  }
+}
