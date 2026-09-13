@@ -20,4 +20,9 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          cover-agent-full-repo             --project-language="python"             --project-root="."             --code-coverage-report-path="coverage.xml"             --test-command="pytest --cov=. --cov-report=xml"             --model="gpt-4o"
+          cover-agent-full-repo \
+            --project-language="python" \
+            --project-root="${{ github.workspace }}" \
+            --code-coverage-report-path="coverage.xml" \
+            --test-command="pytest --cov=. --cov-report=xml" \
+            --model="gpt-4o"
