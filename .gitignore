@@ -57,7 +57,5 @@ amp_monitor_config.json
 amp_scheduler_config.json
 signal_output/
 eSupport/
-core/
 api/
-tests/
 utils/
