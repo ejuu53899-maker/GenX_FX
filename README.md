@@ -1,9 +1,14 @@
 # GenX_FX Trading System
 
-A comprehensive AI-powered foreign exchange trading system with advanced market analysis, automated trading capabilities, Google Cloud Data Agent Kit integration, and Jules Always-On Trading Positioning System Engine.
+A comprehensive AI-powered foreign exchange trading system with advanced market analysis, automated trading capabilities, Google Cloud Data Agent Kit integration, Jules Always-On Trading Positioning System Engine, and GENX LAN Secret/Variable Security Architecture.
 
 ## 🚀 Key Features
 
+- **🔐 GENX GitHub → LAN Secret & Network Architecture**:
+  - **Variable/Secret Separation**: Strict isolation between non-secret variables (`GENX_LAN_HOST`, `GENX_LAN_PORT`, `GENX_API_PORT`, `GENX_DEVICE_NAME`, `GENX_ENVIRONMENT`, `GENX_CONTROL_MODE`) and encrypted secrets (`GENX_LAN_TOKEN`, `GENX_API_SECRET`, `GENX_SSH_PRIVATE_KEY`, `GENX_DEVICE_PASSWORD`, `GENX_WEBHOOK_SECRET`).
+  - **Local Vault Isolation**: `vault/` directory for runtime keys with `.gitignore` enforcing non-commitment of secrets (`!.env.example`, `!vault/.gitkeep`, `!vault/README.md`).
+  - **GitHub Actions Workflow**: Automated deployment (`.github/workflows/lan-deploy.yml`) fetching parameters securely via `${{ vars.* }}` and `${{ secrets.* }}` contexts.
+  - **Secure Network Topology**: Encrypted `VPS -> VPN Tunnel -> Router -> Mini PC (LAN Controller :8080) -> MT5 / EA AI Bridge` path without exposing ports to the public internet.
 - **Jules Always-On Trading Positioning System Engine**:
   - **1-Click Startup Launchers**: Executable `scripts/start_jules_always_on_engine.sh` (Linux/macOS) and `scripts/start_jules_always_on_engine.bat` (Windows)
   - **Mandatory Profit-Closing Rule**: Real-time ownership and profit-closing trade execution for all open symbols across markets
@@ -18,42 +23,78 @@ A comprehensive AI-powered foreign exchange trading system with advanced market 
   - **AI Data Agents**: Specialized agents for Analytics (`DataAnalystAgent`), Pipelines (`DataPipelineAgent`), Quality Audits (`DataQualityAgent`), and Security (`DataGovernanceAgent`)
   - **Starter Pack Scaffolding**: One-command project templates (`bigquery-analytics`, `financial-pipeline`, `realtime-stream`, `vertex-data-agent`)
   - **IDE Extensions & Tasks**: Preset workspace settings, tasks, and prompt context providers for Cursor IDE and VS Code
-- **AI-Powered Analysis**: Advanced machine learning models for market prediction
-- **Automated Trading**: Intelligent trading algorithms with risk management
 
 ## 📁 Project Structure
 
 ```
 GenX_FX/
+├── .github/
+│   └── workflows/
+│       └── lan-deploy.yml          # GitHub Actions LAN Controller deployment workflow
+├── config/                         # Configuration files
+│   ├── genx.yaml                   # System & vault settings
+│   ├── lan.yaml                    # LAN controller & network topology parameters
+│   └── ports.yaml                  # Port registry (LAN :8080, API :8000, MT5 :5001)
+├── vault/                          # Secure local runtime key vault (git-ignored)
+│   ├── README.md                   # Vault security isolation policy
+│   └── .gitkeep
 ├── src/
 │   ├── main.py                     # Main application entry point (--always-on mode)
+│   ├── core/                       # Core engine modules
+│   │   └── network/                # LAN Network Controller (`lan_controller.py`)
 │   ├── trading/                    # Jules Real-Time Trading Position Manager Engine
 │   │   └── jules_position_manager.py
 │   └── cloud_data_agent_kit/       # Google Cloud Data Agent Kit
-│       ├── agents/                 # Analyst, Pipeline, Quality, Governance AI Agents
-│       ├── connectors/             # BigQuery, GCS, Vertex AI connectors
-│       ├── starter_pack/           # Templates and scaffolding generator
-│       ├── ide_integration/        # VS Code / Cursor IDE providers & prompt context
-│       └── cli.py                  # `cloud-data-agent` CLI interface
-├── scripts/                        # Monorepo sync and 1-click engine launcher scripts
+├── scripts/                        # Monorepo sync, LAN control, and 1-click launchers
+│   ├── lan_connect.sh              # LAN tunnel connection script
+│   ├── lan_health.sh               # LAN target health check script
+│   ├── lan_start.sh                # LAN controller start script
+│   ├── lan_stop.sh                 # LAN controller stop script
 │   ├── sync_workspace.sh           # Workspace monorepo subprojects sync script
 │   ├── start_jules_always_on_engine.sh  # 1-Click Always-On Launcher (Linux/Mac)
 │   └── start_jules_always_on_engine.bat # 1-Click Always-On Launcher (Windows)
 ├── JetBrainsMono/                  # Cloned JetBrainsMono monorepo subproject
 ├── ZOLO-A6-9VxNUNA-/               # Cloned ZOLO-A6-9VxNUNA- trading subproject
+├── .env.example                    # Non-secret environment variable template
 ├── tests/                          # Unit and integration tests
-├── docs/                           # Documentation
-├── config/                         # Configuration files
-├── .vscode/                        # VS Code workspace settings and tasks
-├── .cursor/                        # Cursor IDE settings and AI rules
 ├── requirements.txt                # Python dependencies
 ├── GenX_FX.code-workspace         # Multi-root VS Code workspace file
 └── README.md                       # This file
 ```
 
-## ⚡ 1-Click Jules Always-On Engine Launch
+## 🔐 GENX Secret & Network Architecture
 
-Launch the Jules Always-On Trading Positioning System Engine with a single click or command:
+```
+┌─────────────────────────┐
+│        GitHub           │
+│    GENX Repository      │
+│  (Vars & Actions Sec)   │
+└────────────┬────────────┘
+             │ Actions / Deploy
+             ▼
+┌─────────────────────────┐
+│     GENX Controller     │
+│       VPS / Jules       │
+└────────────┬────────────┘
+             │ Encrypted VPN Tunnel
+             ▼
+┌─────────────────────────┐
+│       Router / LAN      │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│      GENX MiniPC        │
+│   (LAN Controller :8080)│
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│     MT5 / EA Bridge     │
+└─────────────────────────┘
+```
+
+## ⚡ 1-Click Jules Always-On Engine Launch
 
 ```bash
 # Linux / macOS
@@ -66,71 +107,29 @@ Launch the Jules Always-On Trading Positioning System Engine with a single click
 python src/main.py --always-on
 ```
 
-### Real-Time Symbol Profit-Closing Rule
-Under Jules management, all open symbols are continuously monitored in the real-time market:
-1. Floating profits are recalculated on every tick.
-2. Dynamic trailing profit locks trigger as profits increase.
-3. Every trade is closed with guaranteed positive realized profit.
+## 🛠️ LAN Control Scripts
+
+```bash
+# Health check target LAN device
+./scripts/lan_health.sh
+
+# Connect to LAN via secure VPN tunnel
+./scripts/lan_connect.sh
+
+# Start / Stop LAN Controller
+./scripts/lan_start.sh
+./scripts/lan_stop.sh
+```
 
 ## 🔄 Monorepo Workspace Sync
-
-To sync and merge all workspace subprojects (`JetBrainsMono` and `ZOLO-A6-9VxNUNA-`):
 
 ```bash
 ./scripts/sync_workspace.sh
 ```
 
-## ☁️ Cloud Data Agent Kit
-
-### CLI Commands
-```bash
-# List available starter packs
-python -m cloud_data_agent_kit.cli list-starters
-
-# Scaffold a new BigQuery analytics starter pack project
-python -m cloud_data_agent_kit.cli scaffold --template bigquery-analytics --dir ./my_data_starter
-
-# Run natural language query via Data Analyst Agent
-python -m cloud_data_agent_kit.cli query --prompt "Show top market pairs by volume"
-
-# Run automated data quality audit on BigQuery table
-python -m cloud_data_agent_kit.cli audit --dataset market_data --table ticks
-```
-
-## 🛠️ Setup Instructions
-
-### Prerequisites
-- Python 3.11+
-- Node.js 18+
-- VS Code or Cursor IDE
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd GenX_FX
-   ```
-
-2. Create virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Run the application:
-   ```bash
-   python src/main.py --always-on
-   ```
-
 ## 🧪 Testing
 ```bash
-# Run all tests
+# Run all unit and integration tests
 pytest
 ```
 

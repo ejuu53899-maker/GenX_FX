@@ -1,0 +1,16 @@
+# GENX Global System Configuration
+system:
+  name: "GENX Trading System & LAN Controller"
+  version: "3.6.9"
+  environment: "demo"
+  control_mode: "lan"
+  device_name: "GENX-MINIPC"
+
+logging:
+  level: "INFO"
+  file: "logs/genx_fx.log"
+
+security:
+  vault_enabled: true
+  use_github_secrets: true
+  allow_local_env_override: false
