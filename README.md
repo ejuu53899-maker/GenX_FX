@@ -1,9 +1,13 @@
 # GenX_FX Trading System
 
-A comprehensive AI-powered foreign exchange trading system with advanced market analysis, automated trading capabilities, Google Cloud Data Agent Kit integration, Jules Always-On Trading Positioning System Engine, and GENX LAN Secret/Variable Security Architecture.
+A comprehensive AI-powered foreign exchange trading system with advanced market analysis, automated trading capabilities, Google Cloud Data Agent Kit integration, Jules Always-On Trading Positioning System Engine, GENX LAN Secret/Variable Security Architecture, and GitHub Workspace 24/7 Live VS Code Server.
 
 ## 🚀 Key Features
 
+- **🌐 GitHub Workspace 24/7 Live VS Code Server**:
+  - **DevContainer Integration**: Pre-configured `.devcontainer/devcontainer.json` for GitHub Codespaces and VS Code Remote Containers with Python 3.11+, Node.js 18+, Docker-in-Docker, and auto-forwarded ports (8080 LAN, 8000 API, 5001 MT5).
+  - **Continuous Keep-Alive Daemon**: `scripts/launch_vscode_247_server.sh` script to keep Jules engine and VS Code workspace running continuously 24/7.
+  - **1-Click IDE Tasks**: Dedicated VS Code task `Launch GitHub Workspace 24/7 Live VS Code Server`.
 - **🔐 GENX GitHub → LAN Secret & Network Architecture**:
   - **Variable/Secret Separation**: Strict isolation between non-secret variables (`GENX_LAN_HOST`, `GENX_LAN_PORT`, `GENX_API_PORT`, `GENX_DEVICE_NAME`, `GENX_ENVIRONMENT`, `GENX_CONTROL_MODE`) and encrypted secrets (`GENX_LAN_TOKEN`, `GENX_API_SECRET`, `GENX_SSH_PRIVATE_KEY`, `GENX_DEVICE_PASSWORD`, `GENX_WEBHOOK_SECRET`).
   - **Local Vault Isolation**: `vault/` directory for runtime keys with `.gitignore` enforcing non-commitment of secrets (`!.env.example`, `!vault/.gitkeep`, `!vault/README.md`).
@@ -28,9 +32,14 @@ A comprehensive AI-powered foreign exchange trading system with advanced market 
 
 ```
 GenX_FX/
+├── .devcontainer/
+│   └── devcontainer.json           # GitHub Codespaces & VS Code 24/7 Server devcontainer
 ├── .github/
 │   └── workflows/
-│       └── lan-deploy.yml          # GitHub Actions LAN Controller deployment workflow
+│       ├── lan-deploy.yml          # GitHub Actions LAN Controller deployment workflow
+│       └── qodo-cover.yml          # Qodo Cover Agent workflow
+├── .vscode/                        # VS Code tasks.json and settings.json
+│   └── tasks.json
 ├── config/                         # Configuration files
 │   ├── genx.yaml                   # System & vault settings
 │   ├── lan.yaml                    # LAN controller & network topology parameters
@@ -46,6 +55,7 @@ GenX_FX/
 │   │   └── jules_position_manager.py
 │   └── cloud_data_agent_kit/       # Google Cloud Data Agent Kit
 ├── scripts/                        # Monorepo sync, LAN control, and 1-click launchers
+│   ├── launch_vscode_247_server.sh # 24/7 GitHub Workspace & VS Code Server Keep-Alive
 │   ├── lan_connect.sh              # LAN tunnel connection script
 │   ├── lan_health.sh               # LAN target health check script
 │   ├── lan_start.sh                # LAN controller start script
@@ -62,37 +72,18 @@ GenX_FX/
 └── README.md                       # This file
 ```
 
-## 🔐 GENX Secret & Network Architecture
+## 🌐 24/7 GitHub Workspace & VS Code Server
 
+To launch the 24/7 live VS Code workspace server:
+
+```bash
+# Launch 24/7 VS Code Server Keep-Alive script
+./scripts/launch_vscode_247_server.sh
 ```
-┌─────────────────────────┐
-│        GitHub           │
-│    GENX Repository      │
-│  (Vars & Actions Sec)   │
-└────────────┬────────────┘
-             │ Actions / Deploy
-             ▼
-┌─────────────────────────┐
-│     GENX Controller     │
-│       VPS / Jules       │
-└────────────┬────────────┘
-             │ Encrypted VPN Tunnel
-             ▼
-┌─────────────────────────┐
-│       Router / LAN      │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│      GENX MiniPC        │
-│   (LAN Controller :8080)│
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│     MT5 / EA Bridge     │
-└─────────────────────────┘
-```
+
+Or open in **GitHub Codespaces**:
+1. Click **Code** -> **Codespaces** -> **Create codespace on main**.
+2. DevContainer automatically installs dependencies and starts the 24/7 background service via `postStartCommand`.
 
 ## ⚡ 1-Click Jules Always-On Engine Launch
 
