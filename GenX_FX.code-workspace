@@ -68,6 +68,21 @@
         "version": "2.0.0",
         "tasks": [
             {
+                "label": "Launch System Monitoring & Telemetry Exporter",
+                "type": "shell",
+                "command": "./scripts/launch_monitoring.sh",
+                "group": "test",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
                 "label": "Launch GitHub Workspace 24/7 Live VS Code Server",
                 "type": "shell",
                 "command": "./scripts/launch_vscode_247_server.sh",

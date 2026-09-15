@@ -15,11 +15,11 @@ jobs:
 
       - name: Configure GENX Environment
         env:
-          LAN_HOST: ${{ vars.GENX_LAN_HOST }}
-          LAN_PORT: ${{ vars.GENX_LAN_PORT }}
-          LAN_TOKEN: ${{ secrets.GENX_LAN_TOKEN }}
+          GENX_LAN_HOST: ${{ vars.GENX_LAN_HOST }}
+          GENX_LAN_PORT: ${{ vars.GENX_LAN_PORT }}
+          GENX_LAN_TOKEN: ${{ secrets.GENX_LAN_TOKEN }}
         run: |
           echo "GENX LAN target configured"
-          echo "Host: ${LAN_HOST:-192.168.1.100}"
-          echo "Port: ${LAN_PORT:-8080}"
+          echo "Host: ${GENX_LAN_HOST:-192.168.1.100}"
+          echo "Port: ${GENX_LAN_PORT:-8080}"
           ./scripts/lan_health.sh
