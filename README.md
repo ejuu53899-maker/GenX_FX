@@ -1,35 +1,50 @@
-# GenX_FX Trading System
+# GenX_FX Trading System & GENX Starter Kit v3.6.9
 
-A comprehensive AI-powered foreign exchange trading system with advanced market analysis, automated trading capabilities, Google Cloud Data Agent Kit integration, Jules Always-On Trading Positioning System Engine, GENX LAN Secret/Variable Security Architecture, Exness MT5 EA Setup on Linux VPS, and GitHub Workspace 24/7 Live VS Code Server.
+A comprehensive AI-powered foreign exchange trading system with advanced market analysis, automated trading capabilities, Google Cloud Data Agent Kit integration, Jules Always-On Trading Positioning System Engine, GENX LAN Secret/Variable Security Architecture, Exness MT5 EA Setup on Linux VPS, GENX Starter Kit v3.6.9 Installer & Extension Manager, and GitHub Workspace 24/7 Live VS Code Server.
 
 ## 🚀 Key Features
 
+- **🎮 GENX Starter Kit v3.6.9 Installer & Unified Controller**:
+  - **Clean Installation & Setup**: Dedicated installer script (`install/install_genx.sh` and `install/install_genx.ps1`) separating core setup from extension management.
+  - **Unified Command Controller**: `./launcher/genx.sh` supporting `start`, `stop`, `restart`, `status`, `health`, `extensions`, `install-extension`, `update`, and `emergency-stop`.
+  - **Extension & Skill Lifecycle Manager**: `./scripts/install_extension.sh` and Python extension manager (`scripts/genx_command.py`) with manifest validation, automated testing, isolated installation into `skills/`, and rollback.
 - **📈 Exness MT5 EA Setup on Linux VPS**:
   - **Automated Linux VPS Installer**: Headless Wine, Xvfb, MetaTrader 5 Terminal, and Exness EA installer script (`scripts/install_exness_mt5_linux.sh`).
   - **Python Exness MT5 Bridge**: Socket/IPC connector for Exness MT5 account info and position fetching (`src/trading/exness_mt5_bridge.py`).
-  - **1-Click IDE Task**: `Exness MT5 EA Setup on Linux` task in VS Code & Cursor IDE.
 - **🌐 GitHub Workspace 24/7 Live VS Code Server**:
   - **DevContainer Integration**: Pre-configured `.devcontainer/devcontainer.json` for GitHub Codespaces and VS Code Remote Containers with Python 3.11+, Node.js 18+, Docker-in-Docker, and auto-forwarded ports (8080 LAN, 8000 API, 5001 MT5).
   - **Continuous Keep-Alive Daemon**: `scripts/launch_vscode_247_server.sh` script to keep Jules engine and VS Code workspace running continuously 24/7.
-  - **1-Click IDE Tasks**: Dedicated VS Code task `Launch GitHub Workspace 24/7 Live VS Code Server`.
 - **🔐 GENX GitHub → LAN Secret & Network Architecture**:
   - **Variable/Secret Separation**: Strict isolation between non-secret variables (`GENX_LAN_HOST`, `GENX_LAN_PORT`, `GENX_API_PORT`, `GENX_DEVICE_NAME`, `GENX_ENVIRONMENT`, `GENX_CONTROL_MODE`) and encrypted secrets (`GENX_LAN_TOKEN`, `GENX_API_SECRET`, `GENX_SSH_PRIVATE_KEY`, `GENX_DEVICE_PASSWORD`, `GENX_WEBHOOK_SECRET`).
   - **Local Vault Isolation**: `vault/` directory for runtime keys with `.gitignore` enforcing non-commitment of secrets (`!.env.example`, `!vault/.gitkeep`, `!vault/README.md`).
-  - **GitHub Actions Workflow**: Automated deployment (`.github/workflows/lan-deploy.yml`) fetching parameters securely via `${{ vars.* }}` and `${{ secrets.* }}` contexts.
-  - **Secure Network Topology**: Encrypted `VPS -> VPN Tunnel -> Router -> Mini PC (LAN Controller :8080) -> MT5 / EA AI Bridge` path without exposing ports to the public internet.
 - **Jules Always-On Trading Positioning System Engine**:
   - **1-Click Startup Launchers**: Executable `scripts/start_jules_always_on_engine.sh` (Linux/macOS) and `scripts/start_jules_always_on_engine.bat` (Windows)
   - **Mandatory Profit-Closing Rule**: Real-time ownership and profit-closing trade execution for all open symbols across markets
-  - **Real-Time Symbol Manager**: Active tracking of floating profits, dynamic trailing stop locks, and guaranteed profit closes (`JulesPositionManager`)
-- **Monorepo & Subproject Integration**:
-  - Integrated `JetBrainsMono` and `ZOLO-A6-9VxNUNA-` repositories into `GenX_FX.code-workspace`
-  - Version control sync and branch update manager (`scripts/sync_workspace.sh`)
 - **Google Cloud Data Agent Kit**: Full starter pack and intelligent IDE interface for Google Cloud Data ecosystem
 
 ## 📁 Project Structure
 
 ```
 GenX_FX/
+├── install/                        # Core installer scripts
+│   ├── install_genx.sh             # Linux/macOS installer
+│   └── install_genx.ps1            # Windows PowerShell installer
+├── launcher/                       # Unified command controller & lifecycle scripts
+│   ├── genx.sh                     # Unified CLI launcher script
+│   ├── genx.ps1                    # PowerShell launcher script
+│   ├── start.sh                    # Core starter
+│   ├── health_check.sh             # System health checker
+│   ├── stop.sh                     # Process stopper
+│   ├── update.sh                   # Workspace updater
+│   └── emergency_stop.sh           # Emergency kill switch
+├── scripts/                        # Extension installer & management utilities
+│   ├── install_extension.sh        # Extension/skill installer (Linux/Mac)
+│   ├── install_extension.ps1       # Extension/skill installer (Windows)
+│   ├── genx_command.py             # Extension lifecycle manager
+│   ├── install_exness_mt5_linux.sh # Exness MT5 EA Linux VPS installer
+│   ├── launch_monitoring.sh        # System monitoring launcher script
+│   ├── launch_vscode_247_server.sh # 24/7 GitHub Workspace & VS Code Server Keep-Alive
+│   └── sync_workspace.sh           # Workspace monorepo subprojects sync script
 ├── .devcontainer/
 │   └── devcontainer.json           # GitHub Codespaces & VS Code 24/7 Server devcontainer
 ├── .github/
@@ -37,36 +52,45 @@ GenX_FX/
 │       ├── lan-deploy.yml          # GitHub Actions LAN Controller deployment workflow
 │       └── qodo-cover.yml          # Qodo Cover Agent workflow
 ├── .vscode/                        # VS Code tasks.json and settings.json
-│   └── tasks.json
-├── config/                         # Configuration files
+├── config/                         # Configuration files (genx.yaml, lan.yaml, ports.yaml)
 ├── vault/                          # Secure local runtime key vault (git-ignored)
 ├── src/
 │   ├── main.py                     # Main application entry point (--always-on mode)
 │   ├── core/                       # Core engine modules (`lan_controller.py`)
 │   ├── trading/                    # Jules Real-Time Position Manager & Exness MT5 Bridge
-│   │   ├── jules_position_manager.py
-│   │   └── exness_mt5_bridge.py
 │   └── cloud_data_agent_kit/       # Google Cloud Data Agent Kit
-├── scripts/                        # Monorepo sync, LAN control, Exness MT5, and launchers
-│   ├── install_exness_mt5_linux.sh # Exness MT5 EA Linux VPS installer
-│   ├── launch_monitoring.sh        # System monitoring launcher script
-│   ├── launch_vscode_247_server.sh # 24/7 GitHub Workspace & VS Code Server Keep-Alive
-│   ├── lan_connect.sh              # LAN tunnel connection script
-│   ├── lan_health.sh               # LAN target health check script
-│   ├── sync_workspace.sh           # Workspace monorepo subprojects sync script
-│   ├── start_jules_always_on_engine.sh  # 1-Click Always-On Launcher (Linux/Mac)
-│   └── start_jules_always_on_engine.bat # 1-Click Always-On Launcher (Windows)
-├── JetBrainsMono/                  # Cloned JetBrainsMono monorepo subproject
-├── ZOLO-A6-9VxNUNA-/               # Cloned ZOLO-A6-9VxNUNA- trading subproject
 ├── tests/                          # Unit and integration tests
 ├── requirements.txt                # Python dependencies
 ├── GenX_FX.code-workspace         # Multi-root VS Code workspace file
 └── README.md                       # This file
 ```
 
-## 📈 Exness MT5 EA Setup on Linux VPS
+## 🛠️ GENX Starter Kit Installation & Commands
 
-To run the automated Exness MT5 EA installer and launcher on Linux VPS:
+### Installation
+```bash
+# Install GENX Starter Kit
+chmod +x install/install_genx.sh
+./install/install_genx.sh
+```
+
+### Unified Launcher Commands
+```bash
+./launcher/genx.sh start
+./launcher/genx.sh health
+./launcher/genx.sh status
+./launcher/genx.sh extensions
+./launcher/genx.sh install-extension ./my-extension-path
+./launcher/genx.sh update
+./launcher/genx.sh emergency-stop
+```
+
+### Installing Extensions/Skills
+```bash
+./scripts/install_extension.sh ./my-extension-directory
+```
+
+## 📈 Exness MT5 EA Setup on Linux VPS
 
 ```bash
 ./scripts/install_exness_mt5_linux.sh
@@ -75,27 +99,7 @@ To run the automated Exness MT5 EA installer and launcher on Linux VPS:
 ## 🌐 24/7 GitHub Workspace & VS Code Server
 
 ```bash
-# Launch 24/7 VS Code Server Keep-Alive script
 ./scripts/launch_vscode_247_server.sh
-```
-
-## ⚡ 1-Click Jules Always-On Engine Launch
-
-```bash
-# Linux / macOS
-./scripts/start_jules_always_on_engine.sh
-
-# Windows Command Prompt / PowerShell
-.\scripts\start_jules_always_on_engine.bat
-
-# Python direct
-python src/main.py --always-on
-```
-
-## 📊 System Monitoring
-
-```bash
-./scripts/launch_monitoring.sh
 ```
 
 ## 🧪 Testing

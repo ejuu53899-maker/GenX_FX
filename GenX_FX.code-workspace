@@ -68,6 +68,36 @@
         "version": "2.0.0",
         "tasks": [
             {
+                "label": "GENX: Install Starter Kit v3.6.9",
+                "type": "shell",
+                "command": "./install/install_genx.sh",
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
+                "label": "GENX: Health Check & Status",
+                "type": "shell",
+                "command": "./launcher/genx.sh health",
+                "group": "test",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
                 "label": "Exness MT5 EA Setup on Linux",
                 "type": "shell",
                 "command": "./scripts/install_exness_mt5_linux.sh",
