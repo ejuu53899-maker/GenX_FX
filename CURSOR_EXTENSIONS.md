@@ -2,6 +2,11 @@
 
 ## Essential Extensions
 
+### Google Cloud Data Agent Kit & GCP Extensions
+- **Google Cloud Code** (googlecloudtools.cloudcode) - Google Cloud integration, BigQuery, GCS, and Vertex AI
+- **SQLTools** (mtxr.sqltools) - SQL database query management and syntax auto-complete
+- **SQLTools BigQuery Driver** (mtxr.sqltools-driver-bigquery) - Direct BigQuery query execution inside IDE
+
 ### Python Development
 - **Python** (ms-python.python) - Core Python support
 - **Python Debugger** (ms-python.debugpy) - Enhanced debugging
@@ -75,11 +80,22 @@
 
 ## Extension Configuration
 
+### Cloud Data Agent Kit Settings
+```json
+{
+    "cloudDataAgentKit.enabled": true,
+    "cloudDataAgentKit.defaultProjectId": "genx-fx-trading",
+    "cloudDataAgentKit.defaultDataset": "market_data",
+    "cloudDataAgentKit.autoExplainSQL": true
+}
+```
+
 ### Python Extension Settings
 Add these to your Cursor settings:
 ```json
 {
     "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
+    "python.analysis.extraPaths": ["./src"],
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
@@ -119,16 +135,16 @@ Add these to your Cursor settings:
 }
 ```
 
-## Trading System Specific Extensions
+## Trading System & Google Cloud Data Extensions
 
-### Financial Data
-- Consider extensions for handling CSV/Excel files for market data
-- JSON viewers for API responses
+### Financial Data & BigQuery Analytics
+- Consider extensions for handling CSV/Parquet files for market data
+- BigQuery & JSON viewers for API responses
 - REST clients for testing trading APIs
 
 ### Monitoring
 - Log file viewers for trading system logs
-- Dashboard extensions for monitoring trading performance
+- Dashboard extensions for monitoring trading performance and BigQuery query execution costs
 
 ## Notes
 - Some extensions may require additional configuration

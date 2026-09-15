@@ -1,0 +1,44 @@
+{
+    "name": "GenX_FX GitHub Workspace (24/7 Live VS Code Server)",
+    "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "18"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "forwardPorts": [8080, 8000, 5001],
+    "portsAttributes": {
+        "8080": {
+            "label": "GENX LAN Controller",
+            "onAutoForward": "notify"
+        },
+        "8000": {
+            "label": "GENX Core API",
+            "onAutoForward": "notify"
+        },
+        "5001": {
+            "label": "MT5 / EA Bridge",
+            "onAutoForward": "ignore"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.analysis.extraPaths": ["${containerWorkspaceFolder}/src"],
+                "cloudDataAgentKit.enabled": true
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "googlecloudtools.cloudcode",
+                "mtxr.sqltools",
+                "eamodio.gitlens",
+                "pkief.material-icon-theme"
+            ]
+        }
+    },
+    "postCreateCommand": "pip install -r requirements.txt",
+    "postStartCommand": "nohup ./scripts/launch_vscode_247_server.sh > logs/vscode_247_server.log 2>&1 &"
+}

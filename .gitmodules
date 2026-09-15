@@ -1,0 +1,7 @@
+[submodule "JetBrainsMono"]
+	path = JetBrainsMono
+	url = https://github.com/JetBrains/JetBrainsMono.git
+
+[submodule "ZOLO-A6-9VxNUNA-"]
+	path = ZOLO-A6-9VxNUNA-
+	url = https://github.com/L6-N9/ZOLO-A6-9VxNUNA-.git

@@ -1,0 +1,7 @@
+# GENX Port Assignment Registry
+ports:
+  lan_controller: 8080
+  core_api: 8000
+  mt5_bridge: 5001
+  prometheus_metrics: 9090
+  grafana_dashboard: 3000

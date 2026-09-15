@@ -1,0 +1,12 @@
+# GENX LAN Controller Configuration
+lan:
+  default_host: "192.168.1.100"
+  lan_port: 8080
+  api_port: 8000
+  ping_interval_seconds: 10
+  timeout_seconds: 5
+
+topology:
+  control_path: "VPS -> VPN Tunnel -> Router -> Mini PC (LAN Controller :8080)"
+  security_tunnel: "TLS/SSH VPN Encrypted"
+  public_port_exposure: false

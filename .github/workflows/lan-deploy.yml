@@ -1,0 +1,25 @@
+name: GENX LAN Controller
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, feature/* ]
+
+jobs:
+  lan-health:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Configure GENX Environment
+        env:
+          GENX_LAN_HOST: ${{ vars.GENX_LAN_HOST }}
+          GENX_LAN_PORT: ${{ vars.GENX_LAN_PORT }}
+          GENX_LAN_TOKEN: ${{ secrets.GENX_LAN_TOKEN }}
+        run: |
+          echo "GENX LAN target configured"
+          echo "Host: ${GENX_LAN_HOST:-192.168.1.100}"
+          echo "Port: ${GENX_LAN_PORT:-8080}"
+          ./scripts/lan_health.sh

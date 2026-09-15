@@ -1,10 +1,23 @@
 {
     "folders": [
         {
+            "name": "GenX_FX Core",
             "path": "."
+        },
+        {
+            "name": "ZOLO-A6-9VxNUNA-",
+            "path": "ZOLO-A6-9VxNUNA-"
+        },
+        {
+            "name": "JetBrainsMono",
+            "path": "JetBrainsMono"
         }
     ],
     "settings": {
+        "cloudDataAgentKit.enabled": true,
+        "cloudDataAgentKit.defaultProjectId": "genx-fx-trading",
+        "cloudDataAgentKit.defaultDataset": "market_data",
+        "cloudDataAgentKit.autoExplainSQL": true,
         "files.associations": {
             "*.py": "python",
             "*.js": "javascript",
@@ -15,6 +28,7 @@
             "*.yaml": "yaml"
         },
         "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
+        "python.analysis.extraPaths": ["./src"],
         "python.terminal.activateEnvironment": true,
         "terminal.integrated.cwd": "${workspaceFolder}",
         "git.ignoreLimitWarning": true
@@ -31,20 +45,22 @@
                 "cwd": "${workspaceFolder}"
             },
             {
-                "name": "Python: FastAPI",
+                "name": "Start Jules Always-On Engine",
                 "type": "python",
                 "request": "launch",
-                "module": "uvicorn",
-                "args": ["src.main:app", "--reload"],
+                "program": "${workspaceFolder}/src/main.py",
+                "args": ["--always-on"],
                 "console": "integratedTerminal",
                 "cwd": "${workspaceFolder}"
             },
             {
-                "name": "Node.js: Current File",
-                "type": "node",
+                "name": "Cloud Data Agent Kit CLI",
+                "type": "python",
                 "request": "launch",
-                "program": "${file}",
-                "cwd": "${workspaceFolder}"
+                "module": "cloud_data_agent_kit.cli",
+                "args": ["list-starters"],
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder}/src"
             }
         ]
     },
@@ -52,10 +68,9 @@
         "version": "2.0.0",
         "tasks": [
             {
-                "label": "Install Python Dependencies",
+                "label": "GENX: Install Starter Kit v3.6.9",
                 "type": "shell",
-                "command": "pip",
-                "args": ["install", "-r", "requirements.txt"],
+                "command": "./install/install_genx.sh",
                 "group": "build",
                 "presentation": {
                     "echo": true,
@@ -65,6 +80,112 @@
                 },
                 "options": {
                     "cwd": "${workspaceFolder}"
+                }
+            },
+            {
+                "label": "GENX: Health Check & Status",
+                "type": "shell",
+                "command": "./launcher/genx.sh health",
+                "group": "test",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
+                "label": "Exness MT5 EA Setup on Linux",
+                "type": "shell",
+                "command": "./scripts/install_exness_mt5_linux.sh",
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
+                "label": "Launch System Monitoring & Telemetry Exporter",
+                "type": "shell",
+                "command": "./scripts/launch_monitoring.sh",
+                "group": "test",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
+                "label": "Launch GitHub Workspace 24/7 Live VS Code Server",
+                "type": "shell",
+                "command": "./scripts/launch_vscode_247_server.sh",
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
+                "label": "Sync Workspace Subprojects",
+                "type": "shell",
+                "command": "./scripts/sync_workspace.sh",
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
+                "label": "Start Jules Always-On Engine (1-Click)",
+                "type": "shell",
+                "command": "./scripts/start_jules_always_on_engine.sh",
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
+                "label": "Cloud Data Agent: Scaffold Starter Pack",
+                "type": "shell",
+                "command": "python",
+                "args": ["-m", "cloud_data_agent_kit.cli", "scaffold", "--template", "bigquery-analytics", "--dir", "./cloud_starter"],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}/src"
                 }
             },
             {
@@ -82,27 +203,12 @@
                 "options": {
                     "cwd": "${workspaceFolder}"
                 }
-            },
-            {
-                "label": "Format Code",
-                "type": "shell",
-                "command": "black",
-                "args": ["src/", "tests/"],
-                "group": "build",
-                "presentation": {
-                    "echo": true,
-                    "reveal": "always",
-                    "focus": false,
-                    "panel": "shared"
-                },
-                "options": {
-                    "cwd": "${workspaceFolder}"
-                }
             }
         ]
     },
     "extensions": {
         "recommendations": [
+            "googlecloudtools.cloudcode",
             "ms-python.python",
             "ms-python.black-formatter",
             "ms-python.autopep8",
@@ -110,9 +216,7 @@
             "eamodio.gitlens",
             "github.copilot",
             "github.copilot-chat",
-            "pkief.material-icon-theme",
-            "ms-vscode.powershell",
-            "ms-vscode.vscode-json"
+            "pkief.material-icon-theme"
         ]
     }
 }

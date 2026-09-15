@@ -1,4 +1,11 @@
 {
+    // Cloud Data Agent Kit Settings
+    "cloudDataAgentKit.enabled": true,
+    "cloudDataAgentKit.defaultProjectId": "genx-fx-trading",
+    "cloudDataAgentKit.defaultDataset": "market_data",
+    "cloudDataAgentKit.autoExplainSQL": true,
+    "cloudDataAgentKit.maxQueryResults": 1000,
+
     // Editor Settings
     "editor.fontSize": 14,
     "editor.lineHeight": 1.5,
@@ -37,6 +44,7 @@
     
     // Python Settings
     "python.defaultInterpreterPath": "python",
+    "python.analysis.extraPaths": ["./src"],
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,

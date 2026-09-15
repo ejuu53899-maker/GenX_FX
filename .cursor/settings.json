@@ -1,4 +1,9 @@
 {
+    "cloudDataAgentKit.enabled": true,
+    "cloudDataAgentKit.defaultProjectId": "genx-fx-trading",
+    "cloudDataAgentKit.defaultDataset": "market_data",
+    "cloudDataAgentKit.autoExplainSQL": true,
+
     "cursor.general.enableCursorTab": true,
     "cursor.chat.enableChatView": true,
     "cursor.cpp.disabledLanguages": [],
@@ -37,6 +42,7 @@
     },
     
     "python.defaultInterpreterPath": "python",
+    "python.analysis.extraPaths": ["./src"],
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
