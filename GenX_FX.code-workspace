@@ -68,6 +68,21 @@
         "version": "2.0.0",
         "tasks": [
             {
+                "label": "Exness MT5 EA Setup on Linux",
+                "type": "shell",
+                "command": "./scripts/install_exness_mt5_linux.sh",
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "cwd": "${workspaceFolder}"
+                }
+            },
+            {
                 "label": "Launch System Monitoring & Telemetry Exporter",
                 "type": "shell",
                 "command": "./scripts/launch_monitoring.sh",

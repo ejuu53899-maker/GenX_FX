@@ -1,9 +1,13 @@
 # GenX_FX Trading System
 
-A comprehensive AI-powered foreign exchange trading system with advanced market analysis, automated trading capabilities, Google Cloud Data Agent Kit integration, Jules Always-On Trading Positioning System Engine, GENX LAN Secret/Variable Security Architecture, and GitHub Workspace 24/7 Live VS Code Server.
+A comprehensive AI-powered foreign exchange trading system with advanced market analysis, automated trading capabilities, Google Cloud Data Agent Kit integration, Jules Always-On Trading Positioning System Engine, GENX LAN Secret/Variable Security Architecture, Exness MT5 EA Setup on Linux VPS, and GitHub Workspace 24/7 Live VS Code Server.
 
 ## 🚀 Key Features
 
+- **📈 Exness MT5 EA Setup on Linux VPS**:
+  - **Automated Linux VPS Installer**: Headless Wine, Xvfb, MetaTrader 5 Terminal, and Exness EA installer script (`scripts/install_exness_mt5_linux.sh`).
+  - **Python Exness MT5 Bridge**: Socket/IPC connector for Exness MT5 account info and position fetching (`src/trading/exness_mt5_bridge.py`).
+  - **1-Click IDE Task**: `Exness MT5 EA Setup on Linux` task in VS Code & Cursor IDE.
 - **🌐 GitHub Workspace 24/7 Live VS Code Server**:
   - **DevContainer Integration**: Pre-configured `.devcontainer/devcontainer.json` for GitHub Codespaces and VS Code Remote Containers with Python 3.11+, Node.js 18+, Docker-in-Docker, and auto-forwarded ports (8080 LAN, 8000 API, 5001 MT5).
   - **Continuous Keep-Alive Daemon**: `scripts/launch_vscode_247_server.sh` script to keep Jules engine and VS Code workspace running continuously 24/7.
@@ -21,12 +25,6 @@ A comprehensive AI-powered foreign exchange trading system with advanced market 
   - Integrated `JetBrainsMono` and `ZOLO-A6-9VxNUNA-` repositories into `GenX_FX.code-workspace`
   - Version control sync and branch update manager (`scripts/sync_workspace.sh`)
 - **Google Cloud Data Agent Kit**: Full starter pack and intelligent IDE interface for Google Cloud Data ecosystem
-  - **BigQuery Connector & NL2SQL**: Natural language to BigQuery SQL translation and cost estimation
-  - **Cloud Storage Data Lakes**: Automated ingestion and parquet dataset management
-  - **Vertex AI Gemini Agent**: Autonomous data reasoning and market insight generation
-  - **AI Data Agents**: Specialized agents for Analytics (`DataAnalystAgent`), Pipelines (`DataPipelineAgent`), Quality Audits (`DataQualityAgent`), and Security (`DataGovernanceAgent`)
-  - **Starter Pack Scaffolding**: One-command project templates (`bigquery-analytics`, `financial-pipeline`, `realtime-stream`, `vertex-data-agent`)
-  - **IDE Extensions & Tasks**: Preset workspace settings, tasks, and prompt context providers for Cursor IDE and VS Code
 
 ## 📁 Project Structure
 
@@ -41,49 +39,45 @@ GenX_FX/
 ├── .vscode/                        # VS Code tasks.json and settings.json
 │   └── tasks.json
 ├── config/                         # Configuration files
-│   ├── genx.yaml                   # System & vault settings
-│   ├── lan.yaml                    # LAN controller & network topology parameters
-│   └── ports.yaml                  # Port registry (LAN :8080, API :8000, MT5 :5001)
 ├── vault/                          # Secure local runtime key vault (git-ignored)
-│   ├── README.md                   # Vault security isolation policy
-│   └── .gitkeep
 ├── src/
 │   ├── main.py                     # Main application entry point (--always-on mode)
-│   ├── core/                       # Core engine modules
-│   │   └── network/                # LAN Network Controller (`lan_controller.py`)
-│   ├── trading/                    # Jules Real-Time Trading Position Manager Engine
-│   │   └── jules_position_manager.py
+│   ├── core/                       # Core engine modules (`lan_controller.py`)
+│   ├── trading/                    # Jules Real-Time Position Manager & Exness MT5 Bridge
+│   │   ├── jules_position_manager.py
+│   │   └── exness_mt5_bridge.py
 │   └── cloud_data_agent_kit/       # Google Cloud Data Agent Kit
-├── scripts/                        # Monorepo sync, LAN control, and 1-click launchers
+├── scripts/                        # Monorepo sync, LAN control, Exness MT5, and launchers
+│   ├── install_exness_mt5_linux.sh # Exness MT5 EA Linux VPS installer
+│   ├── launch_monitoring.sh        # System monitoring launcher script
 │   ├── launch_vscode_247_server.sh # 24/7 GitHub Workspace & VS Code Server Keep-Alive
 │   ├── lan_connect.sh              # LAN tunnel connection script
 │   ├── lan_health.sh               # LAN target health check script
-│   ├── lan_start.sh                # LAN controller start script
-│   ├── lan_stop.sh                 # LAN controller stop script
 │   ├── sync_workspace.sh           # Workspace monorepo subprojects sync script
 │   ├── start_jules_always_on_engine.sh  # 1-Click Always-On Launcher (Linux/Mac)
 │   └── start_jules_always_on_engine.bat # 1-Click Always-On Launcher (Windows)
 ├── JetBrainsMono/                  # Cloned JetBrainsMono monorepo subproject
 ├── ZOLO-A6-9VxNUNA-/               # Cloned ZOLO-A6-9VxNUNA- trading subproject
-├── .env.example                    # Non-secret environment variable template
 ├── tests/                          # Unit and integration tests
 ├── requirements.txt                # Python dependencies
 ├── GenX_FX.code-workspace         # Multi-root VS Code workspace file
 └── README.md                       # This file
 ```
 
-## 🌐 24/7 GitHub Workspace & VS Code Server
+## 📈 Exness MT5 EA Setup on Linux VPS
 
-To launch the 24/7 live VS Code workspace server:
+To run the automated Exness MT5 EA installer and launcher on Linux VPS:
+
+```bash
+./scripts/install_exness_mt5_linux.sh
+```
+
+## 🌐 24/7 GitHub Workspace & VS Code Server
 
 ```bash
 # Launch 24/7 VS Code Server Keep-Alive script
 ./scripts/launch_vscode_247_server.sh
 ```
-
-Or open in **GitHub Codespaces**:
-1. Click **Code** -> **Codespaces** -> **Create codespace on main**.
-2. DevContainer automatically installs dependencies and starts the 24/7 background service via `postStartCommand`.
 
 ## ⚡ 1-Click Jules Always-On Engine Launch
 
@@ -98,24 +92,10 @@ Or open in **GitHub Codespaces**:
 python src/main.py --always-on
 ```
 
-## 🛠️ LAN Control Scripts
+## 📊 System Monitoring
 
 ```bash
-# Health check target LAN device
-./scripts/lan_health.sh
-
-# Connect to LAN via secure VPN tunnel
-./scripts/lan_connect.sh
-
-# Start / Stop LAN Controller
-./scripts/lan_start.sh
-./scripts/lan_stop.sh
-```
-
-## 🔄 Monorepo Workspace Sync
-
-```bash
-./scripts/sync_workspace.sh
+./scripts/launch_monitoring.sh
 ```
 
 ## 🧪 Testing
