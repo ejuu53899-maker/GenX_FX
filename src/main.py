@@ -2,10 +2,11 @@
 """
 GenX_FX Main Application
 A comprehensive trading system with AI-powered analysis, Google Cloud Data Agent Kit,
-and Jules Always-On Trading Positioning System Engine.
+Jules Always-On Trading Positioning System Engine, and Replit /logs HTTP endpoint server.
 """
 
 import sys
+import os
 import argparse
 from pathlib import Path
 import logging
@@ -19,11 +20,14 @@ from cloud_data_agent_kit.agents import DataAnalystAgent, DataPipelineAgent, Dat
 from trading.jules_position_manager import JulesPositionManager, OpenPosition
 
 # Configure logging
+os.makedirs('logs', exist_ok=True)
+log_file_path = 'logs/genx_fx.log'
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('logs/genx_fx.log'),
+        logging.FileHandler(log_file_path),
         logging.StreamHandler()
     ]
 )
@@ -31,8 +35,20 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+def read_system_logs(max_lines: int = 100) -> str:
+    """Read latest application log lines for the /logs endpoint."""
+    if not os.path.exists(log_file_path):
+        return "No log records found yet."
+    try:
+        with open(log_file_path, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+            return "".join(lines[-max_lines:])
+    except Exception as e:
+        return f"Error reading log file: {e}"
+
+
 class GenXFXApp:
-    """Main application class for GenX_FX trading system with Jules Always-On Engine integration."""
+    """Main application class for GenX_FX trading system with Jules Always-On Engine & Replit logs integration."""
     
     def __init__(self, always_on: bool = False):
         self.version = "1.0.0"
@@ -58,6 +74,7 @@ class GenXFXApp:
         print("System initialized successfully!")
         print("Google Cloud Data Agent Kit (Starter Pack) Active.")
         print("Jules Always-On Positioning Engine: RUNNING")
+        print("Replit Log Endpoint Handler (/logs): AVAILABLE")
 
         # Pre-populate sample market open positions if running in always-on mode
         if self.always_on:
