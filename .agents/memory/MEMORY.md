@@ -1,0 +1,4 @@
+- [Zod v3 integer codegen](zod-integer-codegen.md) — OpenAPI `type: integer` generates `zod.int()` which Zod v3 doesn't support; use `type: number` instead.
+- [Orval params collision](orval-params-collision.md) — Endpoints with both path AND query params cause `Get<Name>Params` collision in api-zod barrel; move symbol to a query param to avoid it.
+- [Alpaca AQ token auth](alpaca-aq-auth.md) — `AQ.` prefix tokens are Alpaca OAuth Bearer tokens; auth via `Authorization: Bearer <token>`, not APCA header pair.
+- [Key pool naming patterns](key-pool-naming.md) — User adds keys with custom names (JULES_API_KEY1, BOLT_API_KEY, SANDBOX_API_TOKEN); keyPool.ts checks 10+ patterns per slot.
