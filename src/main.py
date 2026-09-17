@@ -27,18 +27,18 @@ logger = logging.getLogger(__name__)
 
 class GenXFXApp:
     """Main application class for GenX_FX trading system"""
-    
+
     def __init__(self):
         self.version = "1.0.0"
         self.name = "GenX_FX Trading System"
         logger.info(f"Initializing {self.name} v{self.version}")
-    
+
     def start(self):
         """Start the GenX_FX application"""
         logger.info("Starting GenX_FX Trading System...")
         print(f"Welcome to {self.name} v{self.version}")
         print("System initialized successfully!")
-        
+
         # TODO: Add trading system initialization
         # TODO: Add AI model loading
         # TODO: Add market data connection
@@ -52,7 +52,7 @@ class GenXFXApp:
 def main():
     """Main entry point"""
     app = GenXFXApp()
-    
+
     try:
         app.start()
     except KeyboardInterrupt:
