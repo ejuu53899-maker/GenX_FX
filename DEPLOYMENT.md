@@ -16,6 +16,21 @@ Or via scripts path:
 
 ---
 
+## ☁️ Contabo VPS Cloud Brain Deployment (3-Node Network)
+
+Deploy the GENX Cloud Server on Contabo VPS (Ubuntu Server 24.04, 4 vCPU / 8GB RAM) with Docker, Tailscale, UFW security policy, and Risk Engine limits (0.5–1% risk/trade, 2% daily cap):
+
+```bash
+./scripts/contabo_deploy.sh
+```
+
+### 🌐 3-Node Network Topology
+- **Contabo VPS** (`192.168.1.100`): Cloud Control & Risk Engine Server
+- **GK3PRO Mini PC** (`192.168.1.50`): Local Execution & Trading Worker
+- **Huawei Mobile** (`Android`): Mobile Monitor & Emergency Control
+
+---
+
 ## 📈 One-Click MT5 & EA Smart Hosting VPS Setup
 
 Set up MetaTrader 5 (MT5) terminals, Exness broker accounts, and deploy the GENX Smart EA Trading Bridge on Ubuntu/Windows private VPS hosting devices:

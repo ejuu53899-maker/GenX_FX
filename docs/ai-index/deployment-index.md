@@ -1,12 +1,17 @@
 # 🚀 Deployment Index
 
-Deployment workflows, one-click launcher scripts, MT5 VPS installer, and startup/shutdown procedures.
+Deployment workflows, one-click launcher scripts, Contabo VPS cloud installer, MT5 VPS installer, and startup/shutdown procedures.
 
 ## ⚡ One-Click Deployment Commands
 
 ### System OS Launcher
 ```bash
 ./deploy.sh
+```
+
+### Contabo VPS Cloud Brain Deployment (Ubuntu Server 24.04)
+```bash
+./scripts/contabo_deploy.sh
 ```
 
 ### MT5 VPS & EA Private Hosting Installer (Ubuntu/Windows VPS)

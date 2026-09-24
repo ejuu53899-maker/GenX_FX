@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 class DevOpsAgent(BaseAgent):
-    """DevOps Agent responsible for infrastructure, deployments, containers, MT5 VPS setup, server health, and backups."""
+    """DevOps Agent responsible for infrastructure, deployments, containers, Contabo VPS setup, MT5 VPS setup, server health, and backups."""
 
     def __init__(self, message_bus: MessageBus):
         super().__init__(
@@ -43,6 +43,16 @@ class DevOpsAgent(BaseAgent):
             "stdout": res.stdout,
         }
 
+    def setup_contabo_vps(self) -> Dict[str, Any]:
+        """Execute one-click Contabo VPS cloud setup script."""
+        logger.info("DevOps Agent executing Contabo VPS cloud setup...")
+        res = subprocess.run(["./scripts/contabo_deploy.sh"], capture_output=True, text=True)
+        return {
+            "status": "SUCCESS" if res.returncode == 0 else "FAILED",
+            "returncode": res.returncode,
+            "stdout": res.stdout,
+        }
+
     async def run_task_logic(self, task: Task) -> Dict[str, Any]:
         """Execute DevOps tasks."""
         action = task.parameters.get("action")
@@ -57,6 +67,9 @@ class DevOpsAgent(BaseAgent):
 
         elif action == "SETUP_MT5_VPS":
             return self.setup_mt5_vps()
+
+        elif action == "SETUP_CONTABO_VPS":
+            return self.setup_contabo_vps()
 
         elif action == "CHECK_SERVER_HEALTH":
             health = self.server_manager.get_server_health()
