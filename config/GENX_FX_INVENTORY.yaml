@@ -1,0 +1,24 @@
+# GenX_FX — Inventory & Deployment Identity
+project: GenX_FX
+owner: A6-9V
+developer: LengKundee
+orchestrator: Jules
+deployment_operator: LengA6-9V
+
+deployment_node:
+  id: LENG-A6-9V-LAN-01
+  transport: ethernet
+  connection: Cat6
+  ip: 192.168.1.50
+  target_dir: /opt/GenX_FX
+
+sources:
+  github: true
+  gitlab: true
+  mql5_forge: true
+
+runtimes:
+  python: 3.12
+  node: 20
+  docker: true
+  mt5_bridge: true

@@ -1,18 +1,41 @@
 # GENX 3.6.9 Agent OS Deployment Guide
 
-## 🚀 One-Click Jules Deployment
+## 🚀 GenX_FX — Jules One-Loop Deployment
 
-Deploy and launch the complete GENX 3.6.9 Autonomous Device Intelligence Operating System with a single command:
-
-```bash
-./deploy.sh
-```
-
-Or via scripts path:
+Execute the complete Jules One-Loop Deployment pipeline (`genx deploy`):
 
 ```bash
-./scripts/deploy_jules.sh
+./genx deploy
 ```
+
+Or run bootstrap on node `LENG-A6-9V-LAN-01`:
+
+```bash
+./scripts/bootstrap.sh
+```
+
+---
+
+## 🔄 The Jules One-Loop Deployment Flow
+
+```
+JULES (Orchestrator) ──► PLAN ──► DISCOVER ──► BACKUP ──► GIT ──► CI ──► VERIFY
+                                                                          │
+                                                                          ▼
+RUNNING ◄── PASS ── HEALTH ◄── DEPLOY ◄── LENG-A6-9V ◄── CAT6 ◄── RELEASE ◄── BUILD
+   │                  │
+   ▼                  │
+MONITOR ──► UPDATE ───┘
+   │
+   └── FAIL ──► ROLLBACK ──► PREVIOUS STABLE
+```
+
+1. **Jules Orchestrates**: `Jules` plans, verifies, deploys, and monitors.
+2. **Git Records**: Source of truth is `git@github.com:A6-9V/GenX_FX.git`.
+3. **CI Verifies**: GitHub Actions runs dependency, secret scan, python & MT5 checks.
+4. **Cat6 LAN Node Executes**: Cat6 transport deploys release candidate to node `LENG-A6-9V-LAN-01` (`/opt/GenX_FX/`).
+5. **Trading Safety Gate**: Application deployment defaults to `TRADING = DISABLED`. Trading requires explicit risk and owner authorization before live MT5 enablement.
+6. **Health System Decides**: Health check (`./scripts/health.sh`) promotes or triggers automatic rollback (`./scripts/rollback.sh`).
 
 ---
 
@@ -26,7 +49,7 @@ Deploy the GENX Cloud Server on Contabo VPS (Ubuntu Server 24.04, 4 vCPU / 8GB R
 
 ### 🌐 3-Node Network Topology
 - **Contabo VPS** (`192.168.1.100`): Cloud Control & Risk Engine Server
-- **GK3PRO Mini PC** (`192.168.1.50`): Local Execution & Trading Worker
+- **GK3PRO Mini PC / LENG-A6-9V-LAN-01** (`192.168.1.50`): Local Execution & Trading Worker
 - **Huawei Mobile** (`Android`): Mobile Monitor & Emergency Control
 
 ---
@@ -38,22 +61,6 @@ Set up MetaTrader 5 (MT5) terminals, Exness broker accounts, and deploy the GENX
 ```bash
 ./scripts/install_mt5_ea.sh
 ```
-
----
-
-## 🛠️ What One-Click Deployment Does
-
-1. **Directories Initialization**: Creates required learning loop directories (`data/memories/`, `data/experiences/`, `data/failures/`, `data/improvements/`, `data/usb_drive/`, `logs/`).
-2. **Environment & Dependency Checks**: Verifies Python 3.11+ environment.
-3. **Diagnostic Verification**: Runs test suite to ensure all agents (Commander, Builder, DevOps, Trading, Guardian, Device Workers) are operational.
-4. **Agent OS Launch**: Executes `src/main.py` initiating the 7-step startup sequence:
-   - Security Agent (Guardian) starts
-   - System Health Check
-   - Commander Agent (Central Brain) starts
-   - Skill loading
-   - Device connection
-   - Worker Agents (Mini PC, Laptop, USB Intelligence) initialization
-   - Operations commencement
 
 ---
 

@@ -1,12 +1,17 @@
 # 🚀 Deployment Index
 
-Deployment workflows, one-click launcher scripts, Contabo VPS cloud installer, MT5 VPS installer, and startup/shutdown procedures.
+Deployment workflows, Jules One-Loop Deployment, node bootstrap, Contabo VPS cloud installer, MT5 VPS installer, and startup/shutdown procedures.
 
 ## ⚡ One-Click Deployment Commands
 
-### System OS Launcher
+### Jules One-Loop Deployment
 ```bash
-./deploy.sh
+./genx deploy
+```
+
+### Node Bootstrap (LENG-A6-9V-LAN-01 Cat6 Ethernet Node)
+```bash
+./scripts/bootstrap.sh
 ```
 
 ### Contabo VPS Cloud Brain Deployment (Ubuntu Server 24.04)
@@ -17,6 +22,12 @@ Deployment workflows, one-click launcher scripts, Contabo VPS cloud installer, M
 ### MT5 VPS & EA Private Hosting Installer (Ubuntu/Windows VPS)
 ```bash
 ./scripts/install_mt5_ea.sh
+```
+
+### Node Health Check & Rollback Commands
+```bash
+./scripts/health.sh
+./scripts/rollback.sh
 ```
 
 ## 🔄 Startup Sequence (Executed via `src/main.py` / `AgentOSOrchestrator`)
