@@ -1,6 +1,6 @@
 # 🚀 Deployment Index
 
-Deployment workflows, Jules One-Loop Deployment, node bootstrap, Contabo VPS cloud installer, MT5 VPS installer, and startup/shutdown procedures.
+Deployment workflows, Jules One-Loop Deployment, Exness MT5 trading node setup, Contabo VPS cloud installer, and startup/shutdown procedures.
 
 ## ⚡ One-Click Deployment Commands
 
@@ -9,9 +9,9 @@ Deployment workflows, Jules One-Loop Deployment, node bootstrap, Contabo VPS clo
 ./genx deploy
 ```
 
-### Node Bootstrap (LENG-A6-9V-LAN-01 Cat6 Ethernet Node)
+### Exness MT5 Trading Node Deployment (Linux / Windows VPS)
 ```bash
-./scripts/bootstrap.sh
+./genx trade deploy-exness
 ```
 
 ### Contabo VPS Cloud Brain Deployment (Ubuntu Server 24.04)

@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 class DevOpsAgent(BaseAgent):
-    """DevOps Agent responsible for infrastructure, deployments, containers, Contabo VPS setup, MT5 VPS setup, server health, and backups."""
+    """DevOps Agent responsible for infrastructure, deployments, containers, Exness MT5 setup, Contabo VPS setup, server health, and backups."""
 
     def __init__(self, message_bus: MessageBus):
         super().__init__(
@@ -32,6 +32,18 @@ class DevOpsAgent(BaseAgent):
         self.deployment = DeploymentManager()
         self.monitoring = SystemMonitor()
         self.backup = AutomatedBackup()
+
+    def setup_exness_mt5(self) -> Dict[str, Any]:
+        """Execute Exness MT5 setup and phase testing scripts."""
+        logger.info("DevOps Agent executing Exness MT5 setup & verification...")
+        res_inst = subprocess.run(["python3", "scripts/install_exness_mt5.py"], capture_output=True, text=True)
+        res_test = subprocess.run(["python3", "scripts/test_trading_phase.py"], capture_output=True, text=True)
+        res_rep = subprocess.run(["python3", "scripts/generate_deployment_report.py"], capture_output=True, text=True)
+        return {
+            "status": "SUCCESS" if res_inst.returncode == 0 and res_test.returncode == 0 else "FAILED",
+            "report_generated": res_rep.returncode == 0,
+            "stdout": res_test.stdout,
+        }
 
     def setup_mt5_vps(self) -> Dict[str, Any]:
         """Execute one-click MT5 & EA setup script."""
@@ -64,6 +76,9 @@ class DevOpsAgent(BaseAgent):
         elif action == "RESTART_CONTAINER":
             container = task.parameters.get("container", "genx_api")
             return self.docker_manager.restart_container(container)
+
+        elif action == "SETUP_EXNESS_MT5":
+            return self.setup_exness_mt5()
 
         elif action == "SETUP_MT5_VPS":
             return self.setup_mt5_vps()

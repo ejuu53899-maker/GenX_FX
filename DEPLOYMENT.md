@@ -16,6 +16,36 @@ Or run bootstrap on node `LENG-A6-9V-LAN-01`:
 
 ---
 
+## 📈 Exness MT5 Windows & Linux Trading Node Deployment
+
+Deploy Exness MT5, install `ExpertMAPSAR_GenX_v5.mq5` EA bridge, run Phase 4 verification tests, and generate `EXNESS_DEPLOYMENT_REPORT.md`:
+
+```bash
+./genx trade deploy-exness
+```
+
+Or via direct scripts:
+
+```bash
+# Linux Node / Wine:
+python3 scripts/install_exness_mt5.py
+python3 scripts/test_trading_phase.py
+python3 scripts/generate_deployment_report.py
+
+# Windows Node (PowerShell):
+powershell -ExecutionPolicy Bypass -File scripts/install_exness_mt5_win.ps1
+```
+
+### 🔒 Exness Risk & Safety Controls
+- **Account Mode:** `DEMO` by default
+- **LIVE Trading Gate:** 🛑 `LOCKED OFF` (Requires explicit owner review & authorization)
+- **Max Risk per Trade:** 0.5 – 1.0%
+- **Daily Loss Limit:** 2.0%
+- **Max Drawdown Cap:** 10.0%
+- **Emergency Stop:** Closing automated trading upon trigger
+
+---
+
 ## 🔄 The Jules One-Loop Deployment Flow
 
 ```
@@ -51,16 +81,6 @@ Deploy the GENX Cloud Server on Contabo VPS (Ubuntu Server 24.04, 4 vCPU / 8GB R
 - **Contabo VPS** (`192.168.1.100`): Cloud Control & Risk Engine Server
 - **GK3PRO Mini PC / LENG-A6-9V-LAN-01** (`192.168.1.50`): Local Execution & Trading Worker
 - **Huawei Mobile** (`Android`): Mobile Monitor & Emergency Control
-
----
-
-## 📈 One-Click MT5 & EA Smart Hosting VPS Setup
-
-Set up MetaTrader 5 (MT5) terminals, Exness broker accounts, and deploy the GENX Smart EA Trading Bridge on Ubuntu/Windows private VPS hosting devices:
-
-```bash
-./scripts/install_mt5_ea.sh
-```
 
 ---
 

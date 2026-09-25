@@ -79,7 +79,7 @@ def main():
     ai_sub.add_parser("stop")
     ai_sub.add_parser("memory")
 
-    # genx trade [status|start|stop|emergency-stop|journal]
+    # genx trade [status|start|stop|emergency-stop|journal|deploy-exness|report]
     trade_parser = subparsers.add_parser("trade", help="MT5 Trading Control")
     trade_sub = trade_parser.add_subparsers(dest="action")
     trade_sub.add_parser("status")
@@ -87,6 +87,8 @@ def main():
     trade_sub.add_parser("stop")
     trade_sub.add_parser("emergency-stop")
     trade_sub.add_parser("journal")
+    trade_sub.add_parser("deploy-exness")
+    trade_sub.add_parser("report")
 
     # genx container [list|restart]
     cont_parser = subparsers.add_parser("container", help="Docker Container Control")
@@ -177,6 +179,10 @@ def main():
             res = trade.trade_emergency_stop()
         elif getattr(args, "action", None) == "journal":
             res = trade.trade_journal()
+        elif getattr(args, "action", None) == "deploy-exness":
+            res = trade.deploy_exness()
+        elif getattr(args, "action", None) == "report":
+            res = trade.trade_report()
         else:
             res = trade.trade_status()
 
