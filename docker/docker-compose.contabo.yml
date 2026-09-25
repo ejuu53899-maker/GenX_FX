@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  genx-api:
+    image: genx/api:3.6.9
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: genx-fastapi-server
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - GENX_MODE=production
+      - RISK_PER_TRADE_PCT=1.0
+      - DAILY_DRAWDOWN_CAP_PCT=2.0
+    volumes:
+      - ../data:/opt/genx_fx/data
+      - ../logs:/opt/genx_fx/logs
+
+  genx-vault:
+    image: genx/vault:3.6.9
+    container_name: genx-vault-security
+    restart: always
+    volumes:
+      - ../vault:/opt/genx_fx/vault
+      - ../logs:/opt/genx_fx/logs
+
+  mt5-bridge:
+    image: genx/mt5-bridge:3.6.9
+    container_name: genx-mt5-bridge
+    restart: always
+    ports:
+      - "8001:8001"
+    volumes:
+      - ../data/mt5_vps:/opt/genx_fx/data/mt5_vps
